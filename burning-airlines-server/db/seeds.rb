@@ -48,4 +48,5 @@ flig3.reservations << rese4 << rese5
 
 airp0.flights << flig0 << flig2
 airp1.flights << flig1
-airp2.flights << flig3
+airp2.flights << flig3 << flig4
+
