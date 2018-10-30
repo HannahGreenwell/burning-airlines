@@ -1,0 +1,11 @@
+<h1>All Airplanes</h1>
+
+
+<%= link_to "Add new airplane", new_airplane_path%>
+<br>
+<ul>
+
+  <% @airplanes.each do |airplane| %>
+    <li><%= airplane.model %> (Rows: <%= airplane.rows %>, Columns: <%= airplane.columns %>)</li>
+  <% end %>
+</ul>
