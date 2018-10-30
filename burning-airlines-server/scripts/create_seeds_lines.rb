@@ -170,7 +170,7 @@ generator.add_associations keys, map
 keys = ['Flight', 'Reservation']
 map = {
   keys[0] => [0, 1, 2, 3],
-  keys[1] => [[0], [1, 2], [3], [4]]
+  keys[1] => [[0], [1, 2], [3], [4, 5]]
 }
 generator.add_associations keys, map
 
