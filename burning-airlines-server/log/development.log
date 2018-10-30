@@ -5845,3 +5845,94 @@ ActionView::Template::Error (undefined method `model' for nil:NilClass):
 app/views/flights/new.html.erb:47:in `block in _app_views_flights_new_html_erb__581087975403819805_70157537726540'
 app/views/flights/new.html.erb:42:in `_app_views_flights_new_html_erb__581087975403819805_70157537726540'
   [1m[36mFlight Load (2.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  [1m[36mFlight Load (1.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirplane Load (1.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/flights" for 127.0.0.1 at 2018-10-31 10:01:05 +1100
+  [1m[35m (16.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hannah/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  [1m[36mAirplane Load (1.0ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/flights/new.html.erb:26
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/new.html.erb:42
+  Rendered flights/new.html.erb within layouts/application (66.8ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 18.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `model' for nil:NilClass):
+    44:       <td><%= flight.date %></td>
+    45:       <td><%= flight.flight_number %></td>
+    46:       <td><%= flight.origin %>&gt<%= flight.destination %></td>
+    47:       <td><%= flight.airplane.model %></td>
+    48:       <td>Seats</td>
+    49:     </tr>
+    50:   <% end %>
+  
+app/views/flights/new.html.erb:47:in `block in _app_views_flights_new_html_erb__454644491388338409_70094687531100'
+app/views/flights/new.html.erb:42:in `_app_views_flights_new_html_erb__454644491388338409_70094687531100'
+Started PUT "/__web_console/repl_sessions/42e5d73889c1d6d2f4f0c3b207381638" for 127.0.0.1 at 2018-10-31 10:01:18 +1100
+Started PUT "/__web_console/repl_sessions/42e5d73889c1d6d2f4f0c3b207381638" for 127.0.0.1 at 2018-10-31 10:01:21 +1100
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlight Destroy (0.9ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Started GET "/flights" for 127.0.0.1 at 2018-10-31 10:02:09 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/flights/new.html.erb:26
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/new.html.erb:42
+  Rendered flights/new.html.erb within layouts/application (14.3ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `model' for nil:NilClass):
+    44:       <td><%= flight.date %></td>
+    45:       <td><%= flight.flight_number %></td>
+    46:       <td><%= flight.origin %>&gt<%= flight.destination %></td>
+    47:       <td><%= flight.airplane.model %></td>
+    48:       <td>Seats</td>
+    49:     </tr>
+    50:   <% end %>
+  
+app/views/flights/new.html.erb:47:in `block in _app_views_flights_new_html_erb__454644491388338409_70094687285880'
+app/views/flights/new.html.erb:42:in `_app_views_flights_new_html_erb__454644491388338409_70094687285880'
+Started GET "/" for 127.0.0.1 at 2018-10-31 10:02:14 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hannah/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hannah/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-10-31 10:02:17 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  [1m[36mAirplane Load (1.2ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/flights/new.html.erb:26
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/new.html.erb:42
+  Rendered flights/new.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `model' for nil:NilClass):
+    44:       <td><%= flight.date %></td>
+    45:       <td><%= flight.flight_number %></td>
+    46:       <td><%= flight.origin %>&gt<%= flight.destination %></td>
+    47:       <td><%= flight.airplane.model %></td>
+    48:       <td>Seats</td>
+    49:     </tr>
+    50:   <% end %>
+  
+app/views/flights/new.html.erb:47:in `block in _app_views_flights_new_html_erb__454644491388338409_70094668297380'
+app/views/flights/new.html.erb:42:in `_app_views_flights_new_html_erb__454644491388338409_70094668297380'
+Started PUT "/__web_console/repl_sessions/2acaba3e0d99850ffd6c79abebd1d80f" for 127.0.0.1 at 2018-10-31 10:02:22 +1100
+Started PUT "/__web_console/repl_sessions/2acaba3e0d99850ffd6c79abebd1d80f" for 127.0.0.1 at 2018-10-31 10:02:23 +1100
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
