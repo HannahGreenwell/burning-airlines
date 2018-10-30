@@ -44,7 +44,7 @@ user2.reservations << rese4 << rese5
 flig0.reservations << rese0
 flig1.reservations << rese1 << rese2
 flig2.reservations << rese3
-flig3.reservations << rese4
+flig3.reservations << rese4 << rese5
 
 airp0.flights << flig0 << flig2
 airp1.flights << flig1
