@@ -1,0 +1,51 @@
+<h1>Virgin Airlines</h1>
+
+<%= form_for @flight do |f| %>
+  <fieldset>
+    <%= f.label :flight_number %>
+    <%= f.text_field :flight_number %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :destination %>
+    <%= f.text_field :destination %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :origin %>
+    <%= f.text_field :origin %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :airplane_id, 'Plane' %>
+    <%= f.collection_select :airplane_id, Airplane.all, :id, :model, prompt: 'Please choose a plane' %>
+  </fieldset>
+
+  <%= f.submit %>
+<% end %>
+
+<h2>Flights</h2>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Flight</th>
+    <th>From &gt To</th>
+    <th>Plane</th>
+    <th>Seats</th>
+  </tr>
+  <% @flights.each do |flight| %>
+    <tr>
+      <td><%= flight.date %></td>
+      <td><%= flight.flight_number %></td>
+      <td><%= flight.origin %>&gt<%= flight.destination %></td>
+      <td><%= flight.airplane.model %></td>
+      <td>Seats</td>
+    </tr>
+  <% end %>
+</table>
