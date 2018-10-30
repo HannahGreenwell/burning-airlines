@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'airplanes/new'
+  get 'airplanes/create'
+  get 'airplanes/show'
+  get 'airplanes/index'
   resources :airplanes
   
 
