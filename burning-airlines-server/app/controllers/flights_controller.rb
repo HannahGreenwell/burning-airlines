@@ -9,6 +9,10 @@ class FlightsController < ApplicationController
     redirect_to flights_path
   end
 
+  def search
+    
+  end
+
   private
 
   def flight_params
