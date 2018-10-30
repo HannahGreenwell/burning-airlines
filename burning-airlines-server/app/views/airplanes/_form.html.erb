@@ -1,0 +1,20 @@
+<%= form_for @airplane do |f| %>   <!--html part for cloudinary -->
+
+  <fieldset>
+    <%= f.label :rows %>
+    <%= f.text_field :rows %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :columns %>
+    <%= f.text_field :columns %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </fieldset>
+
+
+
+  <%= f.submit %>
+
+<% end %>

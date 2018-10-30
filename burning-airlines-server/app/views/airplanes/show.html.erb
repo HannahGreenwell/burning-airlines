@@ -1,0 +1,13 @@
+<h2>Model: <%= @airplane.model %></h2>
+
+<div>
+  Number of rows: <%= @airplane.rows %><br>
+  Number of columns : <%=@airplane.columns%><br>
+</div>
+
+
+<div>
+  <%= link_to 'All airplanes', airplanes_path %><br>
+</div>
+
+Flights: <%= link_to @airplane.flights.flight_number, flight_path(@airplane.flight.id) %><br>
