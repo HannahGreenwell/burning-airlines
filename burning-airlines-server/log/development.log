@@ -5389,6 +5389,592 @@ Migrating to ChangeColumnName (20181030094516)
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
 <<<<<<< HEAD
+<<<<<<< HEAD
+  [1m[36mAirplane Load (3.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mFlight Load (4.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mFlight Create (7.8ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "QF01"], ["date", "03-11-2018"], ["destination", "Melbourne"], ["origin", "Sydney"], ["created_at", "2018-10-30 22:22:24.026657"], ["updated_at", "2018-10-30 22:22:24.026657"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mFlight Create (0.7ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "BA666"], ["date", "04-12-2018"], ["destination", "London"], ["origin", "Dubai"], ["created_at", "2018-10-30 22:22:24.039699"], ["updated_at", "2018-10-30 22:22:24.039699"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mFlight Create (0.7ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "CX098"], ["date", "08-12-2018"], ["destination", "Hong Kong"], ["origin", "Taiwan"], ["created_at", "2018-10-30 22:22:24.045262"], ["updated_at", "2018-10-30 22:22:24.045262"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mFlight Create (0.7ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "SG77"], ["date", "09-03-2019"], ["destination", "Singapore"], ["origin", "Delhi"], ["created_at", "2018-10-30 22:22:24.050897"], ["updated_at", "2018-10-30 22:22:24.050897"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mFlight Create (0.8ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "QF7"], ["date", "22-11-2018"], ["destination", "Cairns"], ["origin", "Brisbane"], ["created_at", "2018-10-30 22:22:24.056485"], ["updated_at", "2018-10-30 22:22:24.056485"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Load (1.1ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mAirplane Create (2.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("rows", "columns", "model", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["rows", 24], ["columns", 4], ["model", "737"], ["created_at", "2018-10-30 22:22:24.092375"], ["updated_at", "2018-10-30 22:22:24.092375"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mAirplane Create (0.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("rows", "columns", "model", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["rows", 34], ["columns", 6], ["model", "747"], ["created_at", "2018-10-30 22:22:24.098439"], ["updated_at", "2018-10-30 22:22:24.098439"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mAirplane Create (0.5ms)[0m  [1m[32mINSERT INTO "airplanes" ("rows", "columns", "model", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["rows", 44], ["columns", 8], ["model", "A380"], ["created_at", "2018-10-30 22:22:24.102268"], ["updated_at", "2018-10-30 22:22:24.102268"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:18
+  [1m[36mReservation Load (3.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mReservation Create (0.6ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "2"], ["seatColumn", "A"], ["created_at", "2018-10-30 22:22:24.130050"], ["updated_at", "2018-10-30 22:22:24.130050"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mReservation Create (0.7ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "3"], ["seatColumn", "A"], ["created_at", "2018-10-30 22:22:24.138353"], ["updated_at", "2018-10-30 22:22:24.138353"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mReservation Create (0.9ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "4"], ["seatColumn", "B"], ["created_at", "2018-10-30 22:22:24.143953"], ["updated_at", "2018-10-30 22:22:24.143953"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mReservation Create (0.7ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "5"], ["seatColumn", "D"], ["created_at", "2018-10-30 22:22:24.149458"], ["updated_at", "2018-10-30 22:22:24.149458"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mReservation Create (0.7ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "6"], ["seatColumn", "C"], ["created_at", "2018-10-30 22:22:24.155085"], ["updated_at", "2018-10-30 22:22:24.155085"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mReservation Create (1.0ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "7"], ["seatColumn", "C"], ["created_at", "2018-10-30 22:22:24.161380"], ["updated_at", "2018-10-30 22:22:24.161380"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[36mReservation Load (1.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Luke Lemon"], ["email", "luke.lemon@gmail.com"], ["password_digest", "$2a$10$p7c.nPB3/lHyrwqHiWkRJe9IOCHwF7YvNJ8JIKzZKEhAqJi4cLp8O"], ["created_at", "2018-10-30 22:22:24.270964"], ["updated_at", "2018-10-30 22:22:24.270964"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bob Pilot"], ["email", "bobby_boy@hotmail.com"], ["password_digest", "$2a$10$8/zsbvI.w5aHAnZ0H8gqeeI3Ygwb0onLzO1Fq6VDZ23MoLqpprp1C"], ["created_at", "2018-10-30 22:22:24.334976"], ["updated_at", "2018-10-30 22:22:24.334976"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "John Bananas"], ["email", "john@bananarama.com"], ["password_digest", "$2a$10$AIOA0iGuEDRsFc5tucn.ROo8tL42sULhFzk99D9M3SoLkum9FZShq"], ["created_at", "2018-10-30 22:22:24.398582"], ["updated_at", "2018-10-30 22:22:24.398582"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mReservation Update (11.8ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 1], ["updated_at", "2018-10-30 22:22:24.420770"], ["id", 1]]
+  ↳ db/seeds.rb:40
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mReservation Update (1.0ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 1], ["updated_at", "2018-10-30 22:22:24.443851"], ["id", 2]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mReservation Update (0.8ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 2], ["updated_at", "2018-10-30 22:22:24.451418"], ["id", 3]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mReservation Update (0.8ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 2], ["updated_at", "2018-10-30 22:22:24.456569"], ["id", 4]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mReservation Update (0.8ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 3], ["updated_at", "2018-10-30 22:22:24.462368"], ["id", 5]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mReservation Update (0.8ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 3], ["updated_at", "2018-10-30 22:22:24.467669"], ["id", 6]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mReservation Update (0.8ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 1], ["updated_at", "2018-10-30 22:22:24.475530"], ["id", 1]]
+  ↳ db/seeds.rb:44
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mReservation Update (0.8ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 2], ["updated_at", "2018-10-30 22:22:24.481742"], ["id", 2]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mReservation Update (0.9ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 2], ["updated_at", "2018-10-30 22:22:24.487312"], ["id", 3]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mReservation Update (0.7ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 3], ["updated_at", "2018-10-30 22:22:24.493525"], ["id", 4]]
+  ↳ db/seeds.rb:46
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mReservation Update (0.5ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 4], ["updated_at", "2018-10-30 22:22:24.498524"], ["id", 5]]
+  ↳ db/seeds.rb:47
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mReservation Update (0.6ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 4], ["updated_at", "2018-10-30 22:22:24.502465"], ["id", 6]]
+  ↳ db/seeds.rb:47
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mFlight Update (0.4ms)[0m  [1m[33mUPDATE "flights" SET "airplane_id" = $1, "updated_at" = $2 WHERE "flights"."id" = $3[0m  [["airplane_id", 1], ["updated_at", "2018-10-30 22:22:24.507481"], ["id", 1]]
+  ↳ db/seeds.rb:49
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mFlight Update (0.4ms)[0m  [1m[33mUPDATE "flights" SET "airplane_id" = $1, "updated_at" = $2 WHERE "flights"."id" = $3[0m  [["airplane_id", 1], ["updated_at", "2018-10-30 22:22:24.512270"], ["id", 3]]
+  ↳ db/seeds.rb:49
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mFlight Update (0.5ms)[0m  [1m[33mUPDATE "flights" SET "airplane_id" = $1, "updated_at" = $2 WHERE "flights"."id" = $3[0m  [["airplane_id", 2], ["updated_at", "2018-10-30 22:22:24.516710"], ["id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mFlight Update (0.4ms)[0m  [1m[33mUPDATE "flights" SET "airplane_id" = $1, "updated_at" = $2 WHERE "flights"."id" = $3[0m  [["airplane_id", 3], ["updated_at", "2018-10-30 22:22:24.520871"], ["id", 4]]
+  ↳ db/seeds.rb:51
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Started GET "/airplanes" for 127.0.0.1 at 2018-10-31 09:23:30 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+LoadError (Unable to autoload constant AirplanesController, expected /Users/daniththai/wdi/projects/burning-airlines/burning-airlines/burning-airlines-server/app/controllers/airplanes_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" ORDER BY "airplanes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" ORDER BY "airplanes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirplane Load (0.7ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" ORDER BY "airplanes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" ORDER BY "airplanes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."airplane_id" = $1[0m  [["airplane_id", 1]]
+Started GET "/" for 127.0.0.1 at 2018-10-31 09:27:52 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-31 09:53:28 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes" for 127.0.0.1 at 2018-10-31 09:53:38 +1100
+  
+LoadError (Unable to autoload constant AirplanesController, expected /Users/daniththai/wdi/projects/burning-airlines/burning-airlines/burning-airlines-server/app/controllers/airplanes_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/airplanes" for 127.0.0.1 at 2018-10-31 09:56:33 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+LoadError (Unable to autoload constant AirplanesController, expected /Users/daniththai/wdi/projects/burning-airlines/burning-airlines/burning-airlines-server/app/controllers/airplanes_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-10-31 09:57:11 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [13 times] (12.4ms)
+  Rendered /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.2ms)
+  Rendered /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 49ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes" for 127.0.0.1 at 2018-10-31 09:58:59 +1100
+  
+LoadError (Unable to autoload constant AirplanesController, expected /Users/daniththai/wdi/projects/burning-airlines/burning-airlines/burning-airlines-server/app/controllers/airplanes_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/flights" for 127.0.0.1 at 2018-10-31 09:59:10 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/flights"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/flights" for 127.0.0.1 at 2018-10-31 10:00:00 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/flights"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+=======
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -5446,6 +6032,7 @@ Migrating to ChangeColumnName (20181030094516)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:7
   [1m[36mFlight Create (0.5ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "SG77"], ["date", "09-03-2019"], ["destination", "Singapore"], ["origin", "Delhi"], ["created_at", "2018-10-30 22:20:32.446728"], ["updated_at", "2018-10-30 22:20:32.446728"]]
+>>>>>>> fd96e52a88ae99da2afca2dd40cdf2991a978cfa
 =======
 >>>>>>> a88ea2b91527e680bc2e244bb7093aa95500b05b
   [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -6165,6 +6752,450 @@ ActionView::Template::Error (undefined method `model' for nil:NilClass):
 app/views/flights/new.html.erb:47:in `block in _app_views_flights_new_html_erb__581087975403819805_70157537726540'
 app/views/flights/new.html.erb:42:in `_app_views_flights_new_html_erb__581087975403819805_70157537726540'
   [1m[36mFlight Load (2.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+>>>>>>> f7dabc6a0ae20879e869ef339e5f4b6b6dd87ce7
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mFlight Destroy (0.6ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:2
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mFlight Destroy (0.4ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mFlight Destroy (0.4ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mFlight Destroy (0.4ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mFlight Destroy (0.4ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mFlight Create (0.7ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "QF01"], ["date", "03-11-2018"], ["destination", "Melbourne"], ["origin", "Sydney"], ["created_at", "2018-10-30 23:08:28.157077"], ["updated_at", "2018-10-30 23:08:28.157077"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "BA666"], ["date", "04-12-2018"], ["destination", "London"], ["origin", "Dubai"], ["created_at", "2018-10-30 23:08:28.162651"], ["updated_at", "2018-10-30 23:08:28.162651"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mFlight Create (0.5ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "CX098"], ["date", "08-12-2018"], ["destination", "Hong Kong"], ["origin", "Taiwan"], ["created_at", "2018-10-30 23:08:28.166343"], ["updated_at", "2018-10-30 23:08:28.166343"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mFlight Create (0.4ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "SG77"], ["date", "09-03-2019"], ["destination", "Singapore"], ["origin", "Delhi"], ["created_at", "2018-10-30 23:08:28.170240"], ["updated_at", "2018-10-30 23:08:28.170240"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mFlight Create (0.5ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "date", "destination", "origin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_number", "QF7"], ["date", "22-11-2018"], ["destination", "Cairns"], ["origin", "Brisbane"], ["created_at", "2018-10-30 23:08:28.173940"], ["updated_at", "2018-10-30 23:08:28.173940"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Load (0.5ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mAirplane Destroy (0.4ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mAirplane Destroy (0.4ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mAirplane Destroy (0.3ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mAirplane Create (0.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("rows", "columns", "model", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["rows", 24], ["columns", 4], ["model", "737"], ["created_at", "2018-10-30 23:08:28.199447"], ["updated_at", "2018-10-30 23:08:28.199447"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mAirplane Create (0.5ms)[0m  [1m[32mINSERT INTO "airplanes" ("rows", "columns", "model", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["rows", 34], ["columns", 6], ["model", "747"], ["created_at", "2018-10-30 23:08:28.203267"], ["updated_at", "2018-10-30 23:08:28.203267"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mAirplane Create (0.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("rows", "columns", "model", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["rows", 44], ["columns", 8], ["model", "A380"], ["created_at", "2018-10-30 23:08:28.208691"], ["updated_at", "2018-10-30 23:08:28.208691"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:18
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mReservation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mReservation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mReservation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mReservation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mReservation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mReservation Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mReservation Create (0.5ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "2"], ["seatColumn", "A"], ["created_at", "2018-10-30 23:08:28.244687"], ["updated_at", "2018-10-30 23:08:28.244687"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mReservation Create (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "3"], ["seatColumn", "A"], ["created_at", "2018-10-30 23:08:28.248281"], ["updated_at", "2018-10-30 23:08:28.248281"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mReservation Create (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "4"], ["seatColumn", "B"], ["created_at", "2018-10-30 23:08:28.251945"], ["updated_at", "2018-10-30 23:08:28.251945"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mReservation Create (0.5ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "5"], ["seatColumn", "D"], ["created_at", "2018-10-30 23:08:28.255428"], ["updated_at", "2018-10-30 23:08:28.255428"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mReservation Create (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "6"], ["seatColumn", "C"], ["created_at", "2018-10-30 23:08:28.259287"], ["updated_at", "2018-10-30 23:08:28.259287"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mReservation Create (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["seatRow", "7"], ["seatColumn", "C"], ["created_at", "2018-10-30 23:08:28.263168"], ["updated_at", "2018-10-30 23:08:28.263168"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Luke Lemon"], ["email", "luke.lemon@gmail.com"], ["password_digest", "$2a$10$IUxIvipjS0NhDHqUzIDGSOjKzi.bDQ8627InnX1Si8NLdg/pat3Nq"], ["created_at", "2018-10-30 23:08:28.349850"], ["updated_at", "2018-10-30 23:08:28.349850"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bob Pilot"], ["email", "bobby_boy@hotmail.com"], ["password_digest", "$2a$10$Mqy3WMR0wlYUvIblYuovX.bwn5u5vvnV5xj2TYC62HLe4bKRRotja"], ["created_at", "2018-10-30 23:08:28.413275"], ["updated_at", "2018-10-30 23:08:28.413275"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "John Bananas"], ["email", "john@bananarama.com"], ["password_digest", "$2a$10$e5KnyTIOnXby6oMisxdOieK/F13Zzafz/CuXbBxRK7YVzhhkLNpTe"], ["created_at", "2018-10-30 23:08:28.477453"], ["updated_at", "2018-10-30 23:08:28.477453"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mReservation Update (0.5ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 4], ["updated_at", "2018-10-30 23:08:28.485781"], ["id", 7]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mReservation Update (0.3ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 4], ["updated_at", "2018-10-30 23:08:28.489578"], ["id", 8]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mReservation Update (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 5], ["updated_at", "2018-10-30 23:08:28.493250"], ["id", 9]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mReservation Update (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 5], ["updated_at", "2018-10-30 23:08:28.496602"], ["id", 10]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mReservation Update (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 6], ["updated_at", "2018-10-30 23:08:28.500478"], ["id", 11]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mReservation Update (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "user_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["user_id", 6], ["updated_at", "2018-10-30 23:08:28.503860"], ["id", 12]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mReservation Update (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 6], ["updated_at", "2018-10-30 23:08:28.509643"], ["id", 7]]
+  ↳ db/seeds.rb:44
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mReservation Update (0.5ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 7], ["updated_at", "2018-10-30 23:08:28.513554"], ["id", 8]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mReservation Update (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 7], ["updated_at", "2018-10-30 23:08:28.517350"], ["id", 9]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mReservation Update (0.5ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 8], ["updated_at", "2018-10-30 23:08:28.520999"], ["id", 10]]
+  ↳ db/seeds.rb:46
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mReservation Update (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 9], ["updated_at", "2018-10-30 23:08:28.524695"], ["id", 11]]
+  ↳ db/seeds.rb:47
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mReservation Update (0.5ms)[0m  [1m[33mUPDATE "reservations" SET "flight_id" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["flight_id", 9], ["updated_at", "2018-10-30 23:08:28.528500"], ["id", 12]]
+  ↳ db/seeds.rb:47
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mFlight Update (0.4ms)[0m  [1m[33mUPDATE "flights" SET "airplane_id" = $1, "updated_at" = $2 WHERE "flights"."id" = $3[0m  [["airplane_id", 4], ["updated_at", "2018-10-30 23:08:28.533823"], ["id", 6]]
+  ↳ db/seeds.rb:49
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mFlight Update (0.4ms)[0m  [1m[33mUPDATE "flights" SET "airplane_id" = $1, "updated_at" = $2 WHERE "flights"."id" = $3[0m  [["airplane_id", 4], ["updated_at", "2018-10-30 23:08:28.537067"], ["id", 8]]
+  ↳ db/seeds.rb:49
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mFlight Update (0.4ms)[0m  [1m[33mUPDATE "flights" SET "airplane_id" = $1, "updated_at" = $2 WHERE "flights"."id" = $3[0m  [["airplane_id", 5], ["updated_at", "2018-10-30 23:08:28.540868"], ["id", 7]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mFlight Update (0.5ms)[0m  [1m[33mUPDATE "flights" SET "airplane_id" = $1, "updated_at" = $2 WHERE "flights"."id" = $3[0m  [["airplane_id", 6], ["updated_at", "2018-10-30 23:08:28.544903"], ["id", 9]]
+  ↳ db/seeds.rb:51
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mFlight Update (0.4ms)[0m  [1m[33mUPDATE "flights" SET "airplane_id" = $1, "updated_at" = $2 WHERE "flights"."id" = $3[0m  [["airplane_id", 6], ["updated_at", "2018-10-30 23:08:28.548680"], ["id", 10]]
+  ↳ db/seeds.rb:51
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+Started GET "/flights" for 127.0.0.1 at 2018-10-31 10:09:26 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  [1m[36mAirplane Load (1.4ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/flights/new.html.erb:26
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/new.html.erb:42
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  Rendered flights/new.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 367ms (Views: 335.9ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/airplanes" for 127.0.0.1 at 2018-10-31 10:09:32 +1100
+  
+LoadError (Unable to autoload constant AirplanesController, expected /Users/daniththai/wdi/projects/burning-airlines/burning-airlines/burning-airlines-server/app/controllers/airplanes_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/flights" for 127.0.0.1 at 2018-10-31 10:18:16 +1100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/daniththai/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/flights/new.html.erb:26
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/new.html.erb:42
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/flights/new.html.erb:47
+  Rendered flights/new.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 369ms (Views: 340.5ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/airplanes" for 127.0.0.1 at 2018-10-31 10:18:21 +1100
+  
+LoadError (Unable to autoload constant AirplanesController, expected /Users/daniththai/wdi/projects/burning-airlines/burning-airlines/burning-airlines-server/app/controllers/airplanes_controller.rb to define it):
+  
+<<<<<<< HEAD
+app/views/flights/new.html.erb:47:in `block in _app_views_flights_new_html_erb__581087975403819805_70157537726540'
+app/views/flights/new.html.erb:42:in `_app_views_flights_new_html_erb__581087975403819805_70157537726540'
+  [1m[36mFlight Load (2.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
 <<<<<<< HEAD
   [1m[36mFlight Load (1.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mAirplane Load (1.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -6698,6 +7729,8 @@ Started GET "/airplanes" for 127.0.0.1 at 2018-10-31 10:09:47 +1100
   
 LoadError (Unable to autoload constant AirplanesController, expected /Users/hannah/wdi/projects/burning-airlines/burning-airlines-server/app/controllers/airplanes_controller.rb to define it):
   
+=======
+>>>>>>> 6784f431ac4148ac81e10e543dd0fc49872da1a0
 activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
 bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
 bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
@@ -6759,3 +7792,32 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+=======
+Started GET "/airplanes" for 127.0.0.1 at 2018-10-31 10:20:38 +1100
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:10
+  Rendered airplanes/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 50ms (Views: 34.8ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/airplanes/new" for 127.0.0.1 at 2018-10-31 10:21:11 +1100
+Processing by AirplanesController#new as HTML
+  Rendering airplanes/new.html.erb within layouts/application
+  Rendered airplanes/_form.html.erb (3.8ms)
+  Rendered airplanes/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 57ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes" for 127.0.0.1 at 2018-10-31 10:21:23 +1100
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:10
+  Rendered airplanes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+>>>>>>> 6784f431ac4148ac81e10e543dd0fc49872da1a0
