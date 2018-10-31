@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'user/index'
   resources :airplanes
 
   get '/flights' => 'flights#index'
