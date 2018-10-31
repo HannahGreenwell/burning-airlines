@@ -1,4 +1,4 @@
-class AirplaneController < ApplicationController
+class AirplanesController < ApplicationController
 
   def new
     @airplane = Airplane.new
