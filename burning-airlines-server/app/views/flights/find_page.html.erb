@@ -1,0 +1,10 @@
+<h1>This is the blank page used for searching</h1>
+
+<%= form_tag search_find_path do %>
+  <%= label_tag :search, nil, class: "sr-only" %>
+  From: <%= text_field_tag :from %>
+  To: <%= text_field_tag :to %>
+  <div>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  </div>
+<% end %>

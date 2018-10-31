@@ -6,6 +6,7 @@ flig1 = Flight.create flight_number: "BA666", date: "04-12-2018", destination: "
 flig2 = Flight.create flight_number: "CX098", date: "08-12-2018", destination: "Hong Kong", origin: "Taiwan"
 flig3 = Flight.create flight_number: "SG77", date: "09-03-2019", destination: "Singapore", origin: "Delhi"
 flig4 = Flight.create flight_number: "QF7", date: "22-11-2018", destination: "Cairns", origin: "Brisbane"
+flig5 = Flight.create flight_number: "QF05", date: "03-15-2018", destination: "Melbourne", origin: "Sydney"
 
 puts "Created #{Flight.all.length} flights."
 
@@ -25,6 +26,8 @@ rese2 = Reservation.create seatRow: "4", seatColumn: "B"
 rese3 = Reservation.create seatRow: "5", seatColumn: "D"
 rese4 = Reservation.create seatRow: "6", seatColumn: "C"
 rese5 = Reservation.create seatRow: "7", seatColumn: "C"
+rese6 = Reservation.create seatRow: "17", seatColumn: "C"
+rese7 = Reservation.create seatRow: "11", seatColumn: "D"
 
 puts "Created #{Reservation.all.length} reservations."
 
@@ -39,14 +42,15 @@ puts "Created #{User.all.length} users."
 # Adding the associations
 user0.reservations << rese0 << rese1
 user1.reservations << rese2 << rese3
-user2.reservations << rese4 << rese5
+user2.reservations << rese4 << rese5 << rese6 << rese7
 
 flig0.reservations << rese0
-flig1.reservations << rese1 << rese2
+flig1.reservations << rese1
 flig2.reservations << rese3
-flig3.reservations << rese4 << rese5
+flig3.reservations << rese4
+flig4.reservations << rese5 << rese6
+flig5.reservations << rese2 << rese7
 
 airp0.flights << flig0 << flig2
 airp1.flights << flig1
-airp2.flights << flig3 << flig4
-
+airp2.flights << flig3 << flig4 << flig5
