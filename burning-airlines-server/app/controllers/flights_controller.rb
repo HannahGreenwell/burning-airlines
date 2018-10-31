@@ -25,21 +25,12 @@ class FlightsController < ApplicationController
     @from = params[:from]
     @to = params[:to]
 
-    #This loops through matching flights to return
     #flights = Flight.where(origin: @from, destination: @to)
     flights = Flight.where('origin ILIKE ? AND destination ILIKE ?', '%' + @from + '%', '%' + @to + '%')
-    flights.each do |flight|
-      airplane = flight.airplane
-      # puts "Flight number: #{flight.flight_number}"
-      # puts "Flight date: #{flight.date}"
-      # puts "Flight origin: #{flight.origin}"
-      # puts "Flight destination: #{flight.destination}"
-      # puts "Airplane model: #{airplane.model}"
-    end
 
     #This returns the information about the flights matching the search
     #Also the airplane being used
-    render json: {:flights => flights, :include => [:airplane]}
+    render json: {:flights => flights.as_json(:include => [:airplane])}
   end
 
   def find_page
