@@ -23,7 +23,7 @@ class FlightShow extends Component {
   }
 
   componentDidMount() {
-    this.fetchFlight(20);
+    this.fetchFlight(this.props.match.params.id);
   }
 
   handleClick(row, column){

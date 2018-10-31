@@ -7,10 +7,22 @@ import SearchForm from './SearchForm'
 const ResultsList = (props) => {
   return(
     <table>
-      <tr><th>Date</th><th>Flight Number</th><th>Origin</th><th>Destination</th><th>Aircraft</th><th></th></tr>
-      {props.flights.map(f =>
+      <tr>
+        <th>Date</th>
+        <th>Flight Number</th>
+        <th>Origin</th>
+        <th>Destination</th>
+        <th>Aircraft</th>
+        <th></th>
+      </tr>
+      {
+        props.flights.map(f =>
         <tr>
-        <td>{f.date}</td><td>{f.flight_number}</td><td>{f.origin}</td><td>{f.destination}</td><td>{f.airplane.model}</td><td><a href={"#/flight/" + f.id}>Select</a></td>
+          <td>{f.date}</td>
+          <td><Link to={`/flight/${f.id}`}>{f.flight_number}</Link></td>
+          <td>{f.origin}</td>
+          <td>{f.destination}</td>
+          <td>{f.airplane.model}</td>
         </tr>)
       }
     </table>
@@ -66,3 +78,5 @@ class SearchResults extends Component {
 }
 
 export default SearchResults;
+
+// <a href={"#/flight/" + f.id}>Select</a>
