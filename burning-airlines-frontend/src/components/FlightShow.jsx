@@ -18,7 +18,7 @@ class FlightShow extends Component {
       origin: '',
       destination: '',
       reservedSeats: [],
-      selectedSeat: '',
+      selectedSeat: [],
     };
   }
 
@@ -63,6 +63,7 @@ class FlightShow extends Component {
             numOfRows={this.state.rows}
             numOfColumns={this.state.columns}
             reservedSeats={this.state.reservedSeats}
+            selectedSeat={this.state.selectedSeat}
             onClick={(row, column) => this.handleClick(row, column)}
           />
         </div>

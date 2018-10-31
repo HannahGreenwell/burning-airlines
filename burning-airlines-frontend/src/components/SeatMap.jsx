@@ -20,6 +20,7 @@ class SeatMap extends Component {
             row={i}
             column={j}
             reservedSeats={this.props.reservedSeats}
+            selectedSeat={this.props.selectedSeat}
             numOfColumns={this.props.numOfColumns}
             onClick={() => this.props.onClick(i, j)}
           />

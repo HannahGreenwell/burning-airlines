@@ -13,6 +13,10 @@ class Seat extends Component {
     if (this.props.reservedSeats.some(rs => rs.join('') === seatString)) {
       status = 'reserved';
     }
+    
+    if (this.props.selectedSeat.join('') === seatString) {
+      status = 'selected';
+    }
 
     return status;
   }
