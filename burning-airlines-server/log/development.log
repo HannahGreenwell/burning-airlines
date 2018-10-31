@@ -7279,3 +7279,4 @@ Processing by AirplanesController#index as HTML
 Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.3ms)
 
 
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
