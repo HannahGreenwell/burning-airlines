@@ -12,7 +12,7 @@ const Routes = (
     <div>
       <Route component={Header} />
       <Route path="/search" component={SearchForm} />
-      <Route exact path="/search/:query" component={SearchResults} />
+      <Route exact path="/search/:orig/:dest" component={SearchResults} />
       <Route exact path="/flight/:id" component={FlightShow} />
       <Route exact path="/reservation/:id" component={BookingConfirmation} />
     </div>

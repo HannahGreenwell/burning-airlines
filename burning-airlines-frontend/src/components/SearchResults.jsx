@@ -4,38 +4,57 @@ import axios from 'axios';
 
 import SearchForm from './SearchForm'
 
+const ResultsList = (props) => {
+  return(
+    <div className="results_list">
+      <h2>Search Results</h2>
+      <ul>
+        {props.flights.map(f => <li key={f.id}>
+          {f.date}, <a href={"/flight/" + f.id}>{f.flight_number}</a>, {f.origin} > {f.destination}, {f.airplane.model}
+          </li>)}
+      </ul>
+    </div>
+  );
+};
 
 class SearchResults extends Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
       flights: []
     }
   }
 
   componentDidMount(){
-    console.log('This is running');
     this.performSearch(this.props.match.params.orig, this.props.match.params.dest);
   }
 
+  componentDidUpdate(prevProps) {
+    // Typical usage (don't forget to compare props):
+    if (this.props.match.params.orig !== prevProps.match.params.orig ||
+    this.props.match.params.dest !== prevProps.match.params.dest) {
+      this.performSearch(this.props.match.params.orig, this.props.match.params.dest);
+    }
+  }
+
   performSearch(orig, dest){
-    const URL = 'http://localhost:3000/search';
-    const flightParams={
-      from: orig,
-      to: dest
-    };
-    axios.get(URL, {params: flightParams})
+    console.log("origin:", orig);
+    console.log("destination:", dest);
+    const URL = 'http://localhost:3000/search/find';
+    axios.post(URL, {from: orig, to: dest})
     .then(response=>{
-      this.setState({flights: response})
+      console.log(response.data);
+      this.setState({flights: response.data.flights})
     })
     .catch(console.warn)
   }
 
   render() {
     return (
-      <h2>Flights</h2>
-
+      <div>
+        <ResultsList flights={this.state.flights} />
+      </div>
     );
   }
 }

@@ -6554,3 +6554,15 @@ Processing by FlightsController#show as HTML
 Completed 200 OK in 57ms (Views: 3.9ms | ActiveRecord: 47.0ms)
 
 
+Started GET "/flight/18" for 127.0.0.1 at 2018-10-31 21:02:54 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (1.6ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (1.2ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 15ms (Views: 5.9ms | ActiveRecord: 3.6ms)
+
+
