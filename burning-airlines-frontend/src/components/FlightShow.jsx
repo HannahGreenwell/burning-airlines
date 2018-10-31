@@ -16,6 +16,7 @@ class FlightShow extends Component {
       flightNum: '',
       origin: '',
       destination: '',
+      reservedSeats: [],
     };
   }
 
@@ -29,36 +30,59 @@ class FlightShow extends Component {
 
     axios.get(url)
     .then(response => {
+
+      const newSeatReservations = [];
+
+      response.data.reservations.forEach( r => {
+        newSeatReservations.push([r.seatRow, r.seatColumn]);
+      });
+
+      // MUTATING reservedSeats - NEED TO FIX
       this.setState({
         rows: response.data.airplane.rows,
         columns: response.data.airplane.columns,
-        date: response.data.date,
-        flightNum: response.data.flightNum,
-        origin: response.data.origin,
-        destination: response.data.destination,
+        date: response.data.flight.date,
+        flightNum: response.data.flight.flight_number,
+        origin: response.data.flight.origin,
+        destination: response.data.flight.destination,
+        reservedSeats: newSeatReservations
       })
     })
     .catch(console.warn)
   }
 
-  renderSeatMap() {
-    // console.log('Rows: ', this.state.rows);
-    // console.log('Columns: ', this.state.columns);
-
-    let seatMap = [];
+  renderSeat(row, column) {
     const seatWidthPercentage = `${(100 / this.state.columns) - 1}%`;
-    console.log('SEAT WIDTH: ', seatWidthPercentage);
+    let text = 'avail';
+    let className = 'seat avail';
 
-    for (let i = 0; i < this.state.rows; i++) {
+    if (this.state.reservedSeats.includes([parseInt(row), parseInt(column)])) {
+      text = '';
+      className = 'seat reserved';
+    }
+
+    return (
+      <div
+        className={className}
+        row={row}
+        column={column}
+        style={{width: seatWidthPercentage}}
+      >
+      {text}
+      </div>
+    );
+  }
+
+  renderSeatMap() {
+    let seatMap = [];
+
+    for (let i = 1; i <= this.state.rows; i++) {
       let seats = [];
 
-      for (let j = 0; j < this.state.columns; j++) {
-        seats.push(<div
-          className="seat"
-          row={i}
-          column={j}
-          style={{width: seatWidthPercentage}}
-          >avail</div>);
+      for (let j = 1; j <= this.state.columns; j++) {
+        seats.push(
+          this.renderSeat(i, j)
+        );
       }
       seatMap.push(<div className="row">{seats}</div>);
     }
@@ -69,7 +93,7 @@ class FlightShow extends Component {
   render() {
     return (
       <div className="flight_show">
-        <p>{this.state.date} Flight {this.state.flightNum} {this.state.origin} &gt {this.state.destination}</p>
+        <p>{this.state.date} Flight {this.state.flightNum} {this.state.origin} - {this.state.destination}</p>
 
         <div className="seatmap-container">
           <div className="seatmap">
