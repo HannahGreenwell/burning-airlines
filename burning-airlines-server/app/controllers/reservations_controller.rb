@@ -7,8 +7,12 @@ class ReservationsController < ApplicationController
     render json: Reservation.all.reverse
   end
 
+  def show
+
+  end
+
   def create
-    # TODO - this should look something like this 
+    # TODO - this should look something like this
     # reservation = Reservation.create(
     #   seatRow: params[:seatRow],
     #   seatColumn: params[:seatColumn],

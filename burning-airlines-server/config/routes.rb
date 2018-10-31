@@ -2,14 +2,15 @@ Rails.application.routes.draw do
 
   resources :airplanes
 
-  get '/flights' => 'flights#new'
+  get '/flights/new' => 'flights#new'
   post '/flights' => 'flights#create'
-  get '/flight/:id' => 'flight#show'
+  get '/flight/:id' => 'flights#show'
 
-  get '/search' => 'flights#search'
+  post '/search/find' => 'flights#search', as: 'search_find'
+  get '/search' => 'flights#find_page'
 
-  get '/reservations' => 'reservations#new'
-  get '/reservations' => 'reservations#show'
+  get '/reservations/new' => 'reservations#new'
+  get '/reservation/:id' => 'reservations#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
