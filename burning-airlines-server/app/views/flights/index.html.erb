@@ -1,0 +1,6 @@
+<h1>Flights</h1>
+<ul>
+  <% @flights.each do |flight| %>
+    <li><a href="<%= flight_show_path(flight) %>"><%= flight.flight_number %></a>, date: <%= flight.date %>, origin: <%= flight.origin %>, destination: <%= flight.destination %>, <%= flight.airplane.model %></li>
+  <% end %>
+</ul>

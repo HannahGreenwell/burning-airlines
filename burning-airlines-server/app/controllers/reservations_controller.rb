@@ -8,17 +8,17 @@ class ReservationsController < ApplicationController
   end
 
   def show
-
+    reservation = Reservation.find(params[:id])
+    render json: {reservation: reservation, user: reservation.user, flight: reservation.flight, airplane: reservation.flight.airplane}
   end
 
   def create
-    # TODO - this should look something like this
-    # reservation = Reservation.create(
-    #   seatRow: params[:seatRow],
-    #   seatColumn: params[:seatColumn],
-    #   user_id: params[:user_id],
-    #   flight_id: params[:flight_id],
-    # )
-    # render json: {reservation: reservation, created: true}
+    reservation = Reservation.create(
+      seatRow: params[:seatRow],
+      seatColumn: params[:seatColumn],
+      user_id: params[:user_id],
+      flight_id: params[:flight_id],
+    )
+    redirect_to reservation_booked_path(reservation);
   end
 end
