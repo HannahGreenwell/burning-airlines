@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 
+import axios from 'axios';
+
+// const BA_URL = 'http://localhost:3000/flight/';
+
 class FlightShow extends Component {
 
   constructor() {
@@ -9,6 +13,21 @@ class FlightShow extends Component {
       rows: 4,
       columns: 2,
     };
+  }
+
+  componentDidMount() {
+    this.fetchFlight(18);
+  }
+
+  fetchFlight(flightID) {
+    const url = `http://localhost:3000/flight/${flightID}.json`
+    console.log('URL: ', url);
+
+    axios.get(url)
+    .then(response => {
+      console.log(response);
+    })
+    .catch(console.warn)
   }
 
   renderSeatMap() {
