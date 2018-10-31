@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/search' => 'flights#find_page'
 
   get '/reservations/new' => 'reservations#new'
+  post '/reservations' => 'reservations#create'
   get '/reservation/:id' => 'reservations#show', as: 'reservation_booked'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

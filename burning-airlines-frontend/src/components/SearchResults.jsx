@@ -6,14 +6,14 @@ import SearchForm from './SearchForm'
 
 const ResultsList = (props) => {
   return(
-    <div className="results_list">
-      <h2>Search Results</h2>
-      <ul>
-        {props.flights.map(f => <li key={f.id}>
-          {f.date}, <a href={"/flight/" + f.id}>{f.flight_number}</a>, {f.origin} > {f.destination}, {f.airplane.model}
-          </li>)}
-      </ul>
-    </div>
+    <table>
+      <tr><th>Date</th><th>Flight Number</th><th>Origin</th><th>Destination</th><th>Aircraft</th><th></th></tr>
+      {props.flights.map(f =>
+        <tr>
+        <td>{f.date}</td><td>{f.flight_number}</td><td>{f.origin}</td><td>{f.destination}</td><td>{f.airplane.model}</td><td><a href={"#/flight/" + f.id}>Select</a></td>
+        </tr>)
+      }
+    </table>
   );
 };
 
@@ -31,7 +31,6 @@ class SearchResults extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    // Typical usage (don't forget to compare props):
     if (this.props.match.params.orig !== prevProps.match.params.orig ||
     this.props.match.params.dest !== prevProps.match.params.dest) {
       this.performSearch(this.props.match.params.orig, this.props.match.params.dest);
@@ -51,9 +50,16 @@ class SearchResults extends Component {
   }
 
   render() {
+
+    let resultsList = <p>No results found</p>;
+    if(this.state.flights.length > 0) {
+      resultsList = <ResultsList flights={this.state.flights} />;
+    }
+
     return (
-      <div>
-        <ResultsList flights={this.state.flights} />
+      <div className="results_list">
+        <h2>Search Results</h2>
+        {resultsList}
       </div>
     );
   }
