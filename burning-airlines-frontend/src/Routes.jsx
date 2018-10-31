@@ -5,6 +5,7 @@ import Header from './components/Header';
 import SearchForm from './components/SearchForm';
 import SearchResults from './components/SearchResults';
 import FlightShow from './components/FlightShow';
+import BookingConfirmation from './components/BookingConfirmation';
 
 const Routes = (
   <Router>
@@ -13,6 +14,7 @@ const Routes = (
       <Route path="/search" component={SearchForm} />
       <Route exact path="/search/:query" component={SearchResults} />
       <Route exact path="/flight/:id" component={FlightShow} />
+      <Route exact path="/reservation/:id" component={BookingConfirmation} />
     </div>
   </Router>
 );
