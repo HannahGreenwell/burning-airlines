@@ -1,14 +1,30 @@
 # Adding the data
 Flight.destroy_all
 
-flig0 = Flight.create flight_number: "QF01", date: "03-11-2018", destination: "Melbourne", origin: "Sydney"
-flig1 = Flight.create flight_number: "QF03", date: "04-12-2018", destination: "Melbourne", origin: "Sydney"
-flig2 = Flight.create flight_number: "QF05", date: "08-12-2018", destination: "Brisbane", origin: "Sydney"
-flig3 = Flight.create flight_number: "QF09", date: "04-11-2018", destination: "Sydney", origin: "Melbourne"
-flig4 = Flight.create flight_number: "BA666", date: "05-12-2018", destination: "London", origin: "Dubai"
-flig5 = Flight.create flight_number: "CX098", date: "08-12-2018", destination: "Hong Kong", origin: "Taipei"
-flig6 = Flight.create flight_number: "SG77", date: "09-03-2019", destination: "Singapore", origin: "Delhi"
-flig7 = Flight.create flight_number: "QF7", date: "22-11-2018", destination: "Cairns", origin: "Brisbane"
+flig0 = Flight.create flight_number: "QF01", date: "03-11-2018", destination: "Melbourne", origin: "Perth"
+flig1 = Flight.create flight_number: "QF03", date: "04-11-2018", destination: "Melbourne", origin: "Adelaide"
+flig2 = Flight.create flight_number: "QF05", date: "05-11-2018", destination: "Brisbane", origin: "Sydney"
+flig3 = Flight.create flight_number: "QF09", date: "06-11-2018", destination: "Sydney", origin: "Melbourne"
+flig4 = Flight.create flight_number: "QF01", date: "07-11-2018", destination: "Melbourne", origin: "Perth"
+flig5 = Flight.create flight_number: "QF03", date: "08-11-2018", destination: "Melbourne", origin: "Brisbane"
+flig6 = Flight.create flight_number: "QF05", date: "09-11-2018", destination: "Brisbane", origin: "Cairns"
+flig7 = Flight.create flight_number: "QF09", date: "10-11-2018", destination: "Sydney", origin: "Melbourne"
+flig8 = Flight.create flight_number: "QF01", date: "11-11-2018", destination: "Melbourne", origin: "Perth"
+flig9 = Flight.create flight_number: "QF03", date: "12-11-2018", destination: "Melbourne", origin: "Sydney"
+flig10 = Flight.create flight_number: "QF05", date: "13-11-2018", destination: "Brisbane", origin: "Sydney"
+flig11 = Flight.create flight_number: "QF09", date: "14-11-2018", destination: "Sydney", origin: "Melbourne"
+flig12 = Flight.create flight_number: "QF01", date: "15-11-2018", destination: "Sydney", origin: "Perth"
+flig13 = Flight.create flight_number: "QF03", date: "16-11-2018", destination: "Melbourne", origin: "Sydney"
+flig14 = Flight.create flight_number: "QF05", date: "17-11-2018", destination: "Brisbane", origin: "Sydney"
+flig15 = Flight.create flight_number: "QF09", date: "18-11-2018", destination: "Sydney", origin: "Melbourne"
+flig16 = Flight.create flight_number: "QF01", date: "19-11-2018", destination: "Melbourne", origin: "Perth"
+flig17 = Flight.create flight_number: "QF03", date: "20-11-2018", destination: "Melbourne", origin: "Sydney"
+flig18 = Flight.create flight_number: "QF05", date: "21-11-2018", destination: "Brisbane", origin: "Sydney"
+flig19 = Flight.create flight_number: "QF09", date: "22-11-2018", destination: "Sydney", origin: "Melbourne"
+flig20 = Flight.create flight_number: "BA666", date: "23-12-2018", destination: "London", origin: "Dubai"
+flig21 = Flight.create flight_number: "CX098", date: "24-12-2018", destination: "Hong Kong", origin: "Taipei"
+flig22 = Flight.create flight_number: "SG77", date: "25-03-2019", destination: "Singapore", origin: "Delhi"
+flig23 = Flight.create flight_number: "QF7", date: "26-11-2018", destination: "Cairns", origin: "Brisbane"
 
 puts "Created #{Flight.all.length} flights."
 
@@ -49,7 +65,7 @@ flig1.reservations << rese1 << rese2
 flig2.reservations << rese3
 flig3.reservations << rese4 << rese5
 
-airp0.flights << flig0 << flig2 << flig7
-airp1.flights << flig1 << flig6
-airp2.flights << flig3 << flig4 << flig5
+airp0.flights << flig0 << flig1 << flig2 << flig3 << flig4 << flig5 << flig6 << flig7 << flig12 << flig13 << flig14 << flig15 << flig16 << flig17 << flig18 << flig19
+airp1.flights << flig8 << flig9 << flig10 << flig11 << flig20 << flig21
+airp2.flights << flig22 << flig23
 

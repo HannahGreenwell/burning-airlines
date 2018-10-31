@@ -32,7 +32,7 @@ class SearchForm extends Component{
   render(){
     return(
       <div>
-        <h2>SearchForm</h2>
+        <h2>Search Form</h2>
         <form onSubmit={ ev => this.handleSubmit(ev) }>
           From: <input type="text" onChange={ ev =>this.handleInput1(ev) } /><br/>
           To: <input type="text" onChange={ ev =>this.handleInput(ev) } /><br/>
