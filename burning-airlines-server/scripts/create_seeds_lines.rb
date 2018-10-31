@@ -68,6 +68,9 @@ keys = ['flight_number', 'date', 'destination', 'origin']
 map = {
   keys[0] => [
     "QF01",
+    "QF03",
+    "QF05",
+    "QF09",
     "BA666",
     "CX098",
     "SG77",
@@ -77,11 +80,17 @@ map = {
     "03-11-2018",
     "04-12-2018",
     "08-12-2018",
+    "04-11-2018",
+    "05-12-2018",
+    "08-12-2018",
     "09-03-2019",
     "22-11-2018"
   ],
   keys[2] => [
     "Melbourne",
+    "Melbourne",
+    "Brisbane",
+    "Sydney",
     "London",
     "Hong Kong",
     "Singapore",
@@ -89,8 +98,11 @@ map = {
   ],
   keys[3] => [
     "Sydney",
+    "Sydney",
+    "Sydney",
+    "Melbourne",
     "Dubai",
-    "Taiwan",
+    "Taipei",
     "Delhi",
     "Brisbane"
   ]
@@ -128,12 +140,12 @@ map = {
     "7"
   ],
   keys[1] => [
-    "A",
-    "A",
-    "B",
-    "D",
-    "C",
-    "C"
+    "1",
+    "1",
+    "2",
+    "4",
+    "3",
+    "3"
   ]
 }
 generator.add_data "Reservation", map, keys
@@ -169,7 +181,7 @@ generator.add_associations keys, map
 
 keys = ['Flight', 'Reservation']
 map = {
-  keys[0] => [0, 1, 2, 3],
+  keys[0] => [0, 1, 2, 3,],
   keys[1] => [[0], [1, 2], [3], [4, 5]]
 }
 generator.add_associations keys, map
@@ -177,7 +189,7 @@ generator.add_associations keys, map
 keys = ['Airplane', 'Flight']
 map = {
   keys[0] => [0, 1, 2],
-  keys[1] => [[0, 2], [1], [3, 4]]
+  keys[1] => [[0, 2, 7], [1, 6], [3, 4, 5]]
 }
 generator.add_associations keys, map
 

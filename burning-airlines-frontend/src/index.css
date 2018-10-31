@@ -12,3 +12,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.seatmap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.seat {
+  border: solid 1px black;
+  display: inline-block;
+  text-align: center;
+}
