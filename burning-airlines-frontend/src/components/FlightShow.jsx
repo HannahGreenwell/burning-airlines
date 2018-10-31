@@ -12,6 +12,10 @@ class FlightShow extends Component {
     this.state = {
       rows: 0,
       columns: 0,
+      date: '',
+      flightNum: '',
+      origin: '',
+      destination: '',
     };
   }
 
@@ -28,6 +32,10 @@ class FlightShow extends Component {
       this.setState({
         rows: response.data.airplane.rows,
         columns: response.data.airplane.columns,
+        date: response.data.date,
+        flightNum: response.data.flightNum,
+        origin: response.data.origin,
+        destination: response.data.destination,
       })
     })
     .catch(console.warn)
@@ -43,8 +51,14 @@ class FlightShow extends Component {
 
     for (let i = 0; i < this.state.rows; i++) {
       let seats = [];
+
       for (let j = 0; j < this.state.columns; j++) {
-        seats.push(<div className="seat" row={i} column={j} style={{width: seatWidthPercentage}}>avail</div>);
+        seats.push(<div
+          className="seat"
+          row={i}
+          column={j}
+          style={{width: seatWidthPercentage}}
+          >avail</div>);
       }
       seatMap.push(<div className="row">{seats}</div>);
     }
@@ -55,9 +69,7 @@ class FlightShow extends Component {
   render() {
     return (
       <div className="flight_show">
-        <h2>FlightShow Component</h2>
-
-        <p>3/18/13 Flight 09 JFK > SFO</p>
+        <p>{this.state.date} Flight {this.state.flightNum} {this.state.origin} &gt {this.state.destination}</p>
 
         <div className="seatmap-container">
           <div className="seatmap">
