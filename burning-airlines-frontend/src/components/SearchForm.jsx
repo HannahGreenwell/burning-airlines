@@ -1,41 +1,47 @@
+
 import React, {Component} from 'react';
-import axios from 'axios'
+import {Link} from 'react-router-dom';
+import axios from 'axios';
 
-const URL = 'http://localhost:3000/flights';
-
-class SearchForm extends Component {
+class SearchForm extends Component{
 
   constructor(props){
-    super(props)
-    this.state={
-    flights: []
+    super(props); // runs super() of parent class Component
+    this.state = {
+        orig: '',
+        dest: ''
     }
   }
 
-  componentDidMount(){
-    this.fetchFlights();
-    setInterval(()=>this.fetchFlights(),2000);
+  handleSubmit(event){
+      event.preventDefault();
+      this.props.history.push(`/search/${this.state.orig}/${this.state.dest}`);
   }
 
-  fetchFlights(){
-    axios.get(URL)
-    .then(response=>{
-      console.log(response);
-
+  handleInput(event){
+    this.setState ({
+      orig: event.target.value
     })
   }
 
+  handleInput1(event){
+    this.setState ({
+      dest: event.target.value
+    })
+  }
 
-
-  render() {
-    return (
+  render(){
+    return(
       <div>
-        <ul>
-          { this.state.flights.map( s => <li key={s.id}>{ s.flight_id }</li> ) }
-        </ul>
-      </div>
+        <h2>SearchForm</h2>
 
-    );
+        <form onSubmit={ ev => this.handleSubmit(ev) }>
+          From: <input type="text" onChange={ ev =>this.handleInput1(ev) } /><br/>
+        To: <input type="text" onChange={ ev =>this.handleInput(ev) } /><br/>
+        <input type="submit" value="Find flights" />
+        </form>
+      </div>
+    )
   }
 }
 

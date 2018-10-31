@@ -22,9 +22,12 @@ class FlightsController < ApplicationController
 
   def search
     #This method executes a search and returns correct JSON response
+
     @from = params[:from]
     @to = params[:to]
-
+    puts '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+    puts params
+    puts '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
     #This loops through matching flights to return
     #flights = Flight.where(origin: @from, destination: @to)
     flights = Flight.where('origin ILIKE ? AND destination ILIKE ?', '%' + @from + '%', '%' + @to + '%')
