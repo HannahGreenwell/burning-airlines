@@ -16,7 +16,8 @@ class FlightsController < ApplicationController
     #This method returns the requisite JSON for a flight show page
     flight = Flight.find(params[:id])
     #This returns the information about the flight matching the id given
-    render json: flight.as_json(only: [:id, :flight_number, :date, :origin, :destination], :include => [:reservations, :airplane])
+    render json: {:flight => {:id => flight.id, :flight_number => flight.flight_number, :destination => flight.destination, :origin => flight.origin, :date => flight.date}, :airplane => {:id => flight.airplane.id, :rows => flight.airplane.rows, :columns => flight.airplane.columns, :model => flight.airplane.model}, :reservations => flight.reservations}
+    # render json: flight.as_json(only: [:id, :flight_number, :date, :origin, :destination], :include => [:reservations, :airplane])
   end
 
   def search
@@ -29,16 +30,16 @@ class FlightsController < ApplicationController
     flights = Flight.where('origin ILIKE ? AND destination ILIKE ?', '%' + @from + '%', '%' + @to + '%')
     flights.each do |flight|
       airplane = flight.airplane
-      puts "Flight number: #{flight.flight_number}"
-      puts "Flight date: #{flight.date}"
-      puts "Flight origin: #{flight.origin}"
-      puts "Flight destination: #{flight.destination}"
-      puts "Airplane model: #{airplane.model}"
+      # puts "Flight number: #{flight.flight_number}"
+      # puts "Flight date: #{flight.date}"
+      # puts "Flight origin: #{flight.origin}"
+      # puts "Flight destination: #{flight.destination}"
+      # puts "Airplane model: #{airplane.model}"
     end
 
     #This returns the information about the flights matching the search
     #Also the airplane being used
-    render json: flights.as_json(only: [:id, :flight_id, :seatRow, :seatColumn], :include => [:airplane])
+    render json: {:flights => flights, :include => [:airplane]}
   end
 
   def find_page
