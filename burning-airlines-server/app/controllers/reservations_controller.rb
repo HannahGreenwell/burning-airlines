@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
 
   def show
     reservation = Reservation.find(params[:id])
-    render json: {reservation: reservation, user: reservation.user, flight: reservation.flight, airplane: reservation.flight.airplane}
+    render json: {:reservation => {:seatRow => reservation.seatRow, :seatColumn => reservation.seatColumn}, :user => {:name => reservation.user.name, :email => reservation.user.email}, :flight => {:flight_number => reservation.flight.flight_number, :date => reservation.flight.date, :destination => reservation.flight.destination, :origin => reservation.flight.origin}, :airplane => {:rows => reservation.flight.airplane.rows, :columns => reservation.flight.airplane.columns, :model => reservation.flight.airplane.model}}
   end
 
   def create
