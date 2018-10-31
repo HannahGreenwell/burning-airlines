@@ -22,6 +22,16 @@ code {
   border: solid 1px black;
   display: inline-block;
   text-align: center;
+  margin: 5px;
+}
+
+.reserved {
+  background-color: #AAA;
+}
+
+.available {
+  border: solid 1px red;
+  color: red;
 }
 
 .navbar-item {
