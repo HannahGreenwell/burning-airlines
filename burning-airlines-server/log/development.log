@@ -10906,3 +10906,17 @@ Completed 200 OK in 12ms (Views: 5.0ms | ActiveRecord: 2.7ms)
 =======
 >>>>>>> 872563fe41a6a58e67ff0442df2781112618ccdd
 >>>>>>> 1ccc7e1508affff8cec1b206682b150615effa73
+Started GET "/flight/18" for 127.0.0.1 at 2018-11-01 08:07:14 +1100
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hannah/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (45.6ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (19.7ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (58.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 352ms (Views: 15.6ms | ActiveRecord: 242.4ms)
+
+
