@@ -33,6 +33,7 @@ code {
 .available {
   border: solid 1px red;
   color: red;
+  cursor: pointer;
 }
 
 .navbar-item {

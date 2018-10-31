@@ -4,10 +4,6 @@ class Seat extends Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      selectedSeat: '',
-    };
   }
 
   getSeatStatus() {
@@ -21,11 +17,6 @@ class Seat extends Component {
     return status;
   }
 
-  handleClick(row, column){
-    console.log('ROW:', row);
-    console.log('COLUMN:', column);
-  }
-
   render() {
     const seatWidthPercentage = `${(100 / this.props.numOfColumns) - 3}%`;
     const status = this.getSeatStatus();
@@ -36,7 +27,7 @@ class Seat extends Component {
         row={this.props.row}
         column={this.props.column}
         style={{width: seatWidthPercentage}}
-        onClick={() => this.handleClick(this.props.row, this.props.column)}>
+        onClick={this.props.onClick}>
         {status}
       </div>
     )

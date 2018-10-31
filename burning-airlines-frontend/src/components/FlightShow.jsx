@@ -18,11 +18,18 @@ class FlightShow extends Component {
       origin: '',
       destination: '',
       reservedSeats: [],
+      selectedSeat: '',
     };
   }
 
   componentDidMount() {
-    this.fetchFlight(18);
+    this.fetchFlight(20);
+  }
+
+  handleClick(row, column){
+    this.setState({
+      selectedSeat: [row, column]
+    });
   }
 
   fetchFlight(flightID) {
@@ -56,6 +63,7 @@ class FlightShow extends Component {
             numOfRows={this.state.rows}
             numOfColumns={this.state.columns}
             reservedSeats={this.state.reservedSeats}
+            onClick={(row, column) => this.handleClick(row, column)}
           />
         </div>
       </div>
