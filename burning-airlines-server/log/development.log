@@ -646,3 +646,104 @@ Processing by FlightsController#show as HTML
 Completed 200 OK in 106ms (Views: 99.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/flight/18" for 127.0.0.1 at 2018-10-31 15:30:43 +1100
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hannah/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (1.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mReservation Load (0.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mAirplane Load (3.2ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 252ms (Views: 2.5ms | ActiveRecord: 59.4ms)
+
+
+  [1m[36mFlight Load (1.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Started GET "/flight/18" for 127.0.0.1 at 2018-10-31 15:31:03 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (2.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mAirplane Load (1.2ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/flight/18" for 127.0.0.1 at 2018-10-31 15:32:05 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (1.6ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mReservation Load (23.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mAirplane Load (1.8ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 72ms (Views: 6.0ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/flight/18" for 127.0.0.1 at 2018-10-31 15:34:08 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (11.8ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mReservation Load (10.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mAirplane Load (16.1ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 55ms (Views: 6.4ms | ActiveRecord: 38.8ms)
+
+
+Started GET "/flight/18" for 127.0.0.1 at 2018-10-31 15:38:12 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (26.7ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mReservation Load (14.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mAirplane Load (6.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 105ms (Views: 8.6ms | ActiveRecord: 47.8ms)
+
+
+Started GET "/flight/18" for 127.0.0.1 at 2018-10-31 15:38:27 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (5.3ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mReservation Load (7.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mAirplane Load (14.9ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 48ms (Views: 3.8ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/flight/18" for 127.0.0.1 at 2018-10-31 15:38:36 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mAirplane Load (2.8ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 84ms (Views: 66.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/flight/18" for 127.0.0.1 at 2018-10-31 15:39:26 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (2.7ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mReservation Load (8.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 18]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mAirplane Load (0.7ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 31ms (Views: 11.8ms | ActiveRecord: 11.6ms)
+
+
+  [1m[36mFlight Load (2.7ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mAirplane Load (1.2ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]

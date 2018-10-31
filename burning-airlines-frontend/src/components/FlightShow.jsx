@@ -10,8 +10,8 @@ class FlightShow extends Component {
     super();
 
     this.state = {
-      rows: 4,
-      columns: 2,
+      rows: 0,
+      columns: 0,
     };
   }
 
@@ -20,12 +20,15 @@ class FlightShow extends Component {
   }
 
   fetchFlight(flightID) {
-    const url = `http://localhost:3000/flight/${flightID}.json`
+    const url = `http://localhost:3000/flight/${flightID}`
     console.log('URL: ', url);
 
     axios.get(url)
     .then(response => {
-      console.log(response);
+      this.setState({
+        rows: response.data.airplane.rows,
+        columns: response.data.airplane.columns,
+      })
     })
     .catch(console.warn)
   }
@@ -35,11 +38,13 @@ class FlightShow extends Component {
     // console.log('Columns: ', this.state.columns);
 
     let seatMap = [];
+    const seatWidthPercentage = `${(100 / this.state.columns) - 1}%`;
+    console.log('SEAT WIDTH: ', seatWidthPercentage);
 
     for (let i = 0; i < this.state.rows; i++) {
       let seats = [];
       for (let j = 0; j < this.state.columns; j++) {
-        seats.push(<div className="seat" row={i} column={j}>avail</div>);
+        seats.push(<div className="seat" row={i} column={j} style={{width: seatWidthPercentage}}>avail</div>);
       }
       seatMap.push(<div className="row">{seats}</div>);
     }
