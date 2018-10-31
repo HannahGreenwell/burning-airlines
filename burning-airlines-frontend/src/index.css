@@ -27,6 +27,7 @@ code {
 
 .reserved {
   background-color: #AAA;
+  pointer-events: none;
 }
 
 .available {

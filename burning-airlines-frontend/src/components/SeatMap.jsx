@@ -1,37 +1,11 @@
 import React, {Component} from 'react';
 
-// import Seat from './Seat';
+import Seat from './Seat';
 
 class SeatMap extends Component {
 
   constructor(props) {
     super(props);
-  }
-
-  isSeatReserved(seat) {
-    return this.props.reservedSeats.some(rs => rs.join('') === seat.join(''));
-  }
-
-  renderSeat(row, column) {
-    const seatWidthPercentage = `${(100 / this.props.numOfColumns) - 3}%`;
-    let text = 'Available';
-    let className = 'seat available';
-
-    if (this.isSeatReserved([parseInt(row), parseInt(column)])) {
-      text = 'Reserved';
-      className = 'seat reserved';
-    }
-
-    return (
-      <div
-        className={className}
-        row={row}
-        column={column}
-        style={{width: seatWidthPercentage}}
-      >
-        {text}
-      </div>
-    );
   }
 
   renderSeatMap() {
@@ -42,8 +16,13 @@ class SeatMap extends Component {
 
       for (let j = 1; j <= this.props.numOfColumns; j++) {
         seats.push(
-          this.renderSeat(i, j)
-          // <Seat row={i} column={j} />
+          // this.renderSeat(i, j)
+          <Seat
+            row={i}
+            column={j}
+            reservedSeats={this.props.reservedSeats}
+            numOfColumns={this.props.numOfColumns}
+          />
           // <div>{`${i}-${j}`}</div>
         );
       }

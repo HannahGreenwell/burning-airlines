@@ -4,31 +4,32 @@ class Seat extends Component {
 
   constructor(props) {
     super(props);
-
-
   }
 
-  renderSeat(row, column) {
-    // const seatWidthPercentage = `${(100 / this.state.columns) - 1}%`;
-    const seatWidthPercentage = `24%`;
-    let text = 'avail';
-    let className = 'seat avail';
+  getSeatStatus() {
+    let status = 'available';
+    const seatString = `${this.props.row}${this.props.column}`;
 
-    if (this.state.reservedSeats.includes([parseInt(row), parseInt(column)])) {
-      text = '';
-      className = 'seat reserved';
+    if (this.props.reservedSeats.some(rs => rs.join('') === seatString)) {
+      status = 'reserved';
     }
+
+    return status;
+  }
+
+  render() {
+    const seatWidthPercentage = `${(100 / this.props.numOfColumns) - 3}%`;
+    const status = this.getSeatStatus();
 
     return (
       <div
-        className={className}
-        row={row}
-        column={column}
-        style={{width: seatWidthPercentage}}
-      >
-      {text}
+        className={`seat ${status}`}
+        row={this.props.row}
+        column={this.props.column}
+        style={{width: seatWidthPercentage}}>
+        {status}
       </div>
-    );
+    )
   }
 }
 

@@ -31,14 +31,8 @@ class FlightShow extends Component {
 
     axios.get(url)
     .then(response => {
+      const newReservedSeats = response.data.reservations.map(r => [r.seatRow, r.seatColumn])
 
-      const newSeatReservations = [];
-
-      response.data.reservations.forEach( r => {
-        newSeatReservations.push([r.seatRow, r.seatColumn]);
-      });
-
-      // MUTATING reservedSeats - NEED TO FIX
       this.setState({
         rows: response.data.airplane.rows,
         columns: response.data.airplane.columns,
@@ -46,7 +40,7 @@ class FlightShow extends Component {
         flightNum: response.data.flight.flight_number,
         origin: response.data.flight.origin,
         destination: response.data.flight.destination,
-        reservedSeats: newSeatReservations
+        reservedSeats: [...this.state.reservedSeats, ...newReservedSeats]
       })
     })
     .catch(console.warn)
