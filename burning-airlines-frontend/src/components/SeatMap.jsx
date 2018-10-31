@@ -16,14 +16,13 @@ class SeatMap extends Component {
 
       for (let j = 1; j <= this.props.numOfColumns; j++) {
         seats.push(
-          // this.renderSeat(i, j)
           <Seat
             row={i}
             column={j}
             reservedSeats={this.props.reservedSeats}
             numOfColumns={this.props.numOfColumns}
+            onClick={() => this.props.onClick(i, j)}
           />
-          // <div>{`${i}-${j}`}</div>
         );
       }
       seatMap.push(<div className="row">{seats}</div>);

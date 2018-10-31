@@ -26,7 +26,8 @@ class Seat extends Component {
         className={`seat ${status}`}
         row={this.props.row}
         column={this.props.column}
-        style={{width: seatWidthPercentage}}>
+        style={{width: seatWidthPercentage}}
+        onClick={this.props.onClick}>
         {status}
       </div>
     )
