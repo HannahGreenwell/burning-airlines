@@ -30,6 +30,14 @@ class SearchResults extends Component {
     this.performSearch(this.props.match.params.orig, this.props.match.params.dest);
   }
 
+  componentDidUpdate(prevProps) {
+    // Typical usage (don't forget to compare props):
+    if (this.props.match.params.orig !== prevProps.match.params.orig ||
+    this.props.match.params.dest !== prevProps.match.params.dest) {
+      this.performSearch(this.props.match.params.orig, this.props.match.params.dest);
+    }
+  }
+
   performSearch(orig, dest){
     console.log("origin:", orig);
     console.log("destination:", dest);
