@@ -77,7 +77,7 @@ class FlightShow extends Component {
 
   isFlightFullyBooked(){
     const numOfSeats = this.state.rows * this.state.columns;
-    if (numOfSeats - this.state.reservedSeats.length === 0) {
+    if (numOfSeats - this.state.reservedSeats.length <= 0) {
       return true;
     } else {
       return false;
