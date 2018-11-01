@@ -6,24 +6,37 @@ class BookingConfirmation extends Component {
   constructor(props){
     super(props);
 
-    //TODO take from props instead
     this.state = {
-      name: "John Bananas",
-      email: "john@bananarama.com",
-      flightNumber: "QF09",
-      date: "04-11-2018",
-      destination: "Sydney",
-      origin: "Melbourne",
-      seatRow: "6",
-      seatColumn: "3",
-      model: "A380"
+      name: '',
+      email: '',
+      flightNumber: '',
+      date: '',
+      destination: '',
+      origin: '',
+      seatRow: '',
+      seatColumn: '',
+      model: ''
     };
-
   }
 
   componentDidMount() {
-    //Eventually will set values from props like this:
-    //this.setState({name: this.props.name});
+    const url = `http://localhost:3000/reservation/${this.props.match.params.id}`;
+
+    axios.get(url)
+    .then(response => {
+      this.setState({
+        name: response.data.user.name,
+        email: response.data.user.email,
+        flightNumber: response.data.flight.flight_number,
+        date: response.data.flight.date,
+        destination: response.data.flight.destination,
+        origin: response.data.flight.origin,
+        seatRow: response.data.reservation.seatRow,
+        seatColumn: response.data.reservation.seatColumn,
+        model: response.data.airplane.model
+      })
+    })
+    .catch(console.warn)
   }
 
   render(){

@@ -18,23 +18,17 @@ class FlightShow extends Component {
       origin: '',
       destination: '',
       reservedSeats: [],
-      selectedSeat: '',
+      selectedSeat: [],
+      currentUserID: -1
     };
   }
 
   componentDidMount() {
-    this.fetchFlight(20);
-  }
-
-  handleClick(row, column){
-    this.setState({
-      selectedSeat: [row, column]
-    });
+    this.fetchFlight(this.props.match.params.id);
   }
 
   fetchFlight(flightID) {
     const url = `http://localhost:3000/flight/${flightID}`
-    console.log('URL: ', url);
 
     axios.get(url)
     .then(response => {
@@ -47,10 +41,31 @@ class FlightShow extends Component {
         flightNum: response.data.flight.flight_number,
         origin: response.data.flight.origin,
         destination: response.data.flight.destination,
-        reservedSeats: [...this.state.reservedSeats, ...newReservedSeats]
+        reservedSeats: [...this.state.reservedSeats, ...newReservedSeats],
+        currentUserID: response.data
       })
     })
     .catch(console.warn)
+  }
+
+  handleClick(row, column) {
+    this.setState({
+      selectedSeat: [row, column]
+    });
+  }
+
+  handleSubmit() {
+    const url = `http://localhost:3000/reservations`;
+    axios.post(url, {
+      seatRow: this.state.selectedSeat[0],
+      seatColumn: this.state.selectedSeat[1],
+      email: 'bobby_boy@hotmail.com',
+      flight_id: this.props.match.params.id
+    })
+    .then(response => {
+      this.props.history.push(`/reservation/${response.data.id}`);
+    })
+    .catch(console.warn);
   }
 
   render() {
@@ -58,14 +73,17 @@ class FlightShow extends Component {
       <div className="flight_show">
         <p>{this.state.date} Flight {this.state.flightNum} {this.state.origin} - {this.state.destination}</p>
 
-        <div className="seatmap-container">
+        <form onSubmit={() => this.handleSubmit()}>
           <SeatMap
             numOfRows={this.state.rows}
             numOfColumns={this.state.columns}
             reservedSeats={this.state.reservedSeats}
+            selectedSeat={this.state.selectedSeat}
             onClick={(row, column) => this.handleClick(row, column)}
           />
-        </div>
+
+          <input type="submit" value="Confirm Flight" />
+        </form>
       </div>
     );
   }

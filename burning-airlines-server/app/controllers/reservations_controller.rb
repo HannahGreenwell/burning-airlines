@@ -16,9 +16,10 @@ class ReservationsController < ApplicationController
     reservation = Reservation.create(
       seatRow: params[:seatRow],
       seatColumn: params[:seatColumn],
-      user_id: params[:user_id],
-      flight_id: params[:flight_id]
+      user_id: User.find_by(email: params[:email]).id,
+      flight_id: params[:flight_id],
     )
-    #redirect_to reservation_booked_path(reservation);
+
+    render json: reservation
   end
 end

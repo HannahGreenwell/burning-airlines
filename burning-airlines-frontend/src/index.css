@@ -58,3 +58,13 @@ table, td {
 .margin-left {
   margin: 0 0 0 10px;
 }
+
+.selected {
+  border: solid 1px green;
+  color: green;
+  cursor: pointer;
+}
+
+.navbar-item {
+  display: inline;
+}
