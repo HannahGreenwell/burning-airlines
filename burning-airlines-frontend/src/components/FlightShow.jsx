@@ -92,7 +92,16 @@ class FlightShow extends Component {
           ?
           <p className="bookedOutWarning">Sorry, Flight {this.state.flightNum} is booked out. Please select another flight.</p>
           :
-          <p>{this.state.date} Flight {this.state.flightNum} {this.state.origin} - {this.state.destination} {this.state.model}</p>
+          <table className="table-top">
+            <thead>
+            <tr><th>Date</th><th>Flight Number</th><th>Origin</th><th>Destination</th><th>Aircraft</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr>
+              <td>{this.state.date}</td><td>{this.state.flightNum}</td><td>{this.state.origin}</td><td>{this.state.destination}</td><td>{this.state.model}</td>
+              </tr>
+            </tbody>
+          </table>
         }
 
         <form className="seat-selection" onSubmit={() => this.handleSubmit()}>
