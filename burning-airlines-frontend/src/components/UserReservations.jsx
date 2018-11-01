@@ -46,7 +46,6 @@ class UserReservations extends Component {
     const URL = 'http://localhost:3000/user/reservations';
     axios.post(URL, {email: email})
     .then(response=>{
-      console.log(response.data);
       this.setState({
         name: response.data.name,
         email: response.data.email,
