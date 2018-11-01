@@ -32,11 +32,13 @@ class SearchForm extends Component{
   render(){
     return(
       <div>
-        <h2>Search Form</h2>
-        <form onSubmit={ ev => this.handleSubmit(ev) }>
-          From: <input type="text" onChange={ ev =>this.handleInput1(ev) } /><br/>
-          To: <input type="text" onChange={ ev =>this.handleInput(ev) } /><br/>
-          <input type="submit" value="Find flights" />
+        <h2>Search For Flights</h2>
+        <form className="navbar" onSubmit={ ev => this.handleSubmit(ev) }>
+          <label className="margin-right" for="orig">From: </label>
+          <input className="margin-right" name="orig" className="searchField" type="text" onChange={ ev =>this.handleInput1(ev) } />
+          <label className="margin-right margin-left" for="dest">To: </label>
+          <input className="margin-right" name="dest" type="text" onChange={ ev =>this.handleInput(ev) } />
+          <input className="margin-right" className="nav-button" type="submit" value="Find flights" />
         </form>
       </div>
     )

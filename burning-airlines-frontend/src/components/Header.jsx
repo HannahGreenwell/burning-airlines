@@ -3,18 +3,15 @@ import React from 'react';
 function Header() {
   return (
     <div className="header">
+    <h1>Burning Airlines</h1>
       <nav className="navbar">
-        <ul className="navbar-items">
-          <li className="nav-item">
-            <a className="nav-link" href="#/search">Search</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#/bookings">My Bookings</a>
-          </li>
-        </ul>
+        <form action="#/search">
+            <input className="nav-button margin-right" type="submit" value="Search" />
+        </form>
+        <form action="#/reservations">
+            <input className="nav-button margin-right" type="submit" value="My Bookings" />
+        </form>
       </nav>
-
-      <h1>Burning Airlines</h1>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'user/index'
+  post '/user/reservations' => 'users#show', as: 'user_reservations'
+  get '/user/reservations' => 'users#results'
+
   resources :airplanes
 
   get '/flights' => 'flights#index'

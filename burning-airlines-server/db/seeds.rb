@@ -67,15 +67,14 @@ puts "Created #{User.all.length} users."
 
 # Adding the associations
 user0.reservations << rese0 << rese1
-user1.reservations << rese2 << rese3
+user1.reservations << rese2 << rese3 << rese6 << rese18 << rese14
 user2.reservations << rese4 << rese5
 
 flig0.reservations << rese0 << rese1 << rese2 << rese3 << rese4 << rese5 << rese6 << rese7 << rese15 << rese16
 flig1.reservations << rese8 << rese9 << rese10 << rese11
-flig2.reservations << rese12 << rese13 << rese14
-flig3.reservations << rese17 << rese18 << rese19
+flig12.reservations << rese12 << rese13 << rese14
+flig7.reservations << rese17 << rese18 << rese19
 
 airp0.flights << flig0 << flig1 << flig2 << flig3 << flig4 << flig5 << flig6 << flig7 << flig15 << flig16 << flig17 << flig18 << flig19
 airp1.flights << flig8 << flig9 << flig10 << flig11
 airp2.flights << flig12 << flig13 << flig14
-

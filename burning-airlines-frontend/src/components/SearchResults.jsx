@@ -5,14 +5,21 @@ import axios from 'axios';
 import SearchForm from './SearchForm'
 
 const ResultsList = (props) => {
+
+  let i = 0;
+
   return(
     <table>
+      <thead>
       <tr><th>Date</th><th>Flight Number</th><th>Origin</th><th>Destination</th><th>Aircraft</th><th></th></tr>
+      </thead>
+      <tbody>
       {props.flights.map(f =>
-        <tr>
+        <tr key={i++}>
         <td>{f.date}</td><td>{f.flight_number}</td><td>{f.origin}</td><td>{f.destination}</td><td>{f.airplane.model}</td><td><a href={"#/flight/" + f.id}>Select</a></td>
         </tr>)
       }
+      </tbody>
     </table>
   );
 };

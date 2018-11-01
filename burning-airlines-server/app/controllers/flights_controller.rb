@@ -1,5 +1,6 @@
 class FlightsController < ApplicationController
 
+  #So that this can be accessed from an external location
   skip_before_action :verify_authenticity_token
 
   def new
