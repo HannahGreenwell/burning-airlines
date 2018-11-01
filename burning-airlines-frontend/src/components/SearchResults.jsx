@@ -2,29 +2,31 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-import SearchForm from './SearchForm'
-
 const ResultsList = (props) => {
   return(
     <table>
-      <tr>
-        <th>Date</th>
-        <th>Flight Number</th>
-        <th>Origin</th>
-        <th>Destination</th>
-        <th>Aircraft</th>
-        <th></th>
-      </tr>
-      {
-        props.flights.map(f =>
+      <thead>
         <tr>
-          <td>{f.date}</td>
-          <td><Link to={`/flight/${f.id}`}>{f.flight_number}</Link></td>
-          <td>{f.origin}</td>
-          <td>{f.destination}</td>
-          <td>{f.airplane.model}</td>
-        </tr>)
-      }
+          <th>Date</th>
+          <th>Flight Number</th>
+          <th>Origin</th>
+          <th>Destination</th>
+          <th>Aircraft</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          props.flights.map(f =>
+          <tr key={f.id}>
+            <td>{f.date}</td>
+            <td><Link to={`/flight/${f.id}`}>{f.flight_number}</Link></td>
+            <td>{f.origin}</td>
+            <td>{f.destination}</td>
+            <td>{f.airplane.model}</td>
+          </tr>)
+        }
+      </tbody>
     </table>
   );
 };
@@ -50,12 +52,9 @@ class SearchResults extends Component {
   }
 
   performSearch(orig, dest){
-    console.log("origin:", orig);
-    console.log("destination:", dest);
     const URL = 'http://localhost:3000/search/find';
     axios.post(URL, {from: orig, to: dest})
     .then(response=>{
-      console.log(response.data);
       this.setState({flights: response.data.flights})
     })
     .catch(console.warn)

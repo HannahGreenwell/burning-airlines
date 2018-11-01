@@ -82,7 +82,7 @@ class FlightShow extends Component {
             onClick={(row, column) => this.handleClick(row, column)}
           />
 
-          <input type="submit" value="Confirm Flight Details" />
+          <input type="submit" value="Confirm Flight" />
         </form>
       </div>
     );
