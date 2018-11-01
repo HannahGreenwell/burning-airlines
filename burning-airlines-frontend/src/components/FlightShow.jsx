@@ -25,7 +25,7 @@ class FlightShow extends Component {
 
   componentDidMount() {
     this.fetchFlight(this.props.match.params.id);
-    // setInterval(() => this.fetchFlight(this.props.match.params.id), 2000);
+    setInterval(() => this.fetchFlight(this.props.match.params.id), 2000);
   }
 
   fetchFlight(flightID) {
