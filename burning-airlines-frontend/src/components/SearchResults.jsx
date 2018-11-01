@@ -15,18 +15,21 @@ const ResultsList = (props) => {
           <th>Origin</th>
           <th>Destination</th>
           <th>Aircraft</th>
-          <th></th>
+          <th>Aircraft capacity</th>
+          <th>Seats available</th>
         </tr>
       </thead>
       <tbody>
         {
           props.flights.map(f =>
-          <tr key={f.id}>
+          <tr key={i++}>
             <td>{f.date}</td>
             <td><Link to={`/flight/${f.id}`}>{f.flight_number}</Link></td>
             <td>{f.origin}</td>
             <td>{f.destination}</td>
             <td>{f.airplane.model}</td>
+            <td>{f.airplane.rows * f.airplane.columns}</td>
+            <td className={f.airplane.rows * f.airplane.columns - f.reservations.length === 0 ? "seats-unavailable" : "seats-available"}>{f.airplane.rows * f.airplane.columns - f.reservations.length}</td>
           </tr>)
         }
       </tbody>

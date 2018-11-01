@@ -32,7 +32,8 @@ class FlightsController < ApplicationController
 
     #This returns the information about the flights matching the search
     #Also the airplane being used
-    render json: {:flights => flights.as_json(:include => [:airplane])}
+    render json: {:flights => flights.as_json(:include => [:airplane, :reservations])}
+    #render json: flights: {flights, include: [:airplane, :reservations]}
   end
 
   def find_page
