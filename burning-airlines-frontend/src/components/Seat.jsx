@@ -2,10 +2,6 @@ import React, {Component} from 'react';
 
 class Seat extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   getSeatStatus() {
     let status = 'available';
     const seatString = `${this.props.row}${this.props.column}`;
@@ -22,7 +18,6 @@ class Seat extends Component {
   }
 
   render() {
-    // const seatWidthPercentage = `${(100 / this.props.numOfColumns) - 3}%`;
     const status = this.getSeatStatus();
 
     return (

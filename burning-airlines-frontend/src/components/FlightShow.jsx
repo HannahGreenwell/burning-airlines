@@ -120,7 +120,7 @@ class FlightShow extends Component {
             {
               (this.state.selectedSeat.length > 0)
               ?
-              <span className="current-seat">{`Seat: ${this.formatSelectedSeat()}`}</span>
+              <span className="current-seat upcase">{`Seat: ${this.formatSelectedSeat()}`}</span>
               :
               <span className="current-seat">Please select a seat</span>
             }

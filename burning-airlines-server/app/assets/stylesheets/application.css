@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   font-family: helvetica;
+   margin-left: 20px;
+ }
+
+ fieldset {
+   border: none;
+ }
+
+ label {
+   display: block;
+   padding-bottom: 5px;
+ }
+
+ input[type=submit] {
+   padding: 5px;
+   margin: 15px;
+ }
+
+ th {
+   text-align: left;
+   padding-bottom: 10px;
+ }
+
+ td {
+   padding-right: 15px;
+   padding-bottom: 5px;
+ }

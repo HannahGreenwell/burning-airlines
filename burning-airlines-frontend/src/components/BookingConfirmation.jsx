@@ -56,7 +56,7 @@ class BookingConfirmation extends Component {
         <p><strong>Origin: </strong>{this.state.origin}</p>
         <p><strong>Destination: </strong>{this.state.destination}</p>
         <p><strong>Plane Type: </strong>{this.state.model}</p>
-        <p><strong>Seat: </strong>{this.formatSelectedSeat()}</p>
+        <p><strong>Seat: </strong><span className="upcase">{this.formatSelectedSeat()}</span></p>
       </div>
     );
   }
