@@ -49377,3 +49377,15 @@ Processing by FlightsController#show as HTML
 Completed 200 OK in 10ms (Views: 1.8ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/flight/83" for 127.0.0.1 at 2018-11-02 09:03:56 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mFlight Load (12.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:18
+  [1m[36mAirplane Load (10.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:20
+  [1m[36mReservation Load (1.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 83]]
+  ↳ app/controllers/flights_controller.rb:20
+Completed 200 OK in 78ms (Views: 25.4ms | ActiveRecord: 24.2ms)
+
+
