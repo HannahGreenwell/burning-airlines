@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 const ResultsList = (props) => {
+
+  let i = 0;
+  
   return(
     <table>
       <thead>

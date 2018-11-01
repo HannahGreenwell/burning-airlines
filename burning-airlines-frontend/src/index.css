@@ -26,12 +26,14 @@ form.seat-selection {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  /* border: solid 1px black; */
 }
 
 .row-numbers div {
   font-size: 0.8em;
-  margin: 12px;
+  margin: 12px 20px 12px 12px;
   padding: 10px;
+  text-align: right;
 }
 
 .column-numbers {
@@ -49,7 +51,7 @@ form.seat-selection {
 }
 
 .seat {
-  border: solid 1px black;
+  border: solid 2px black;
   text-align: center;
   font-size: 0.8em;
   margin: 10px;
@@ -75,6 +77,10 @@ form.seat-selection {
 
 .selected-seat-submit {
   margin: 20px 0 50px;
+}
+
+.hide-seat-submit {
+  visibility: hidden;
 }
 
 .current-seat {
@@ -121,5 +127,8 @@ table, td {
 
 .seats-unavailable {
   background-color: red;
+}
 
+.bookedOutWarning {
+  color: red;
 }
