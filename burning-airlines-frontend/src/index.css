@@ -132,3 +132,7 @@ table, td {
 .bookedOutWarning {
   color: red;
 }
+
+.upcase {
+  text-transform: uppercase;
+}

@@ -1,4 +1,4 @@
-<h1>Virgin Airlines</h1>
+<h1>Burning Airlines</h1>
 
 <%= form_for @flight do |f| %>
   <fieldset>
@@ -43,9 +43,9 @@
     <tr>
       <td><%= flight.date %></td>
       <td><%= flight.flight_number %></td>
-      <td><%= flight.origin %>&gt<%= flight.destination %></td>
+      <td><%= flight.origin %> &gt <%= flight.destination %></td>
       <td><%= flight.airplane.model %></td>
-      <td>Seats</td>
+      <td><%= (flight.airplane.rows * flight.airplane.columns) - flight.reservations.length %></td>
     </tr>
   <% end %>
 </table>

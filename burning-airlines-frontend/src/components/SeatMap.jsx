@@ -4,10 +4,6 @@ import Seat from './Seat';
 
 class SeatMap extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   renderSeatMap() {
     let seatMap = [];
 
@@ -48,7 +44,7 @@ class SeatMap extends Component {
     const letters = '*abcdefghijklmnopqrstuvwxyz';
 
     for (let i = 1; i <= this.props.numOfColumns; i++) {
-      colNums.push(<div key={i}>{`${letters[i]}`}</div>);
+      colNums.push(<div className="upcase" key={i}>{`${letters[i]}`}</div>);
     }
 
     return colNums;
