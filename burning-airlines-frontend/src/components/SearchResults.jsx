@@ -6,6 +6,7 @@ const ResultsList = (props) => {
 
   let i = 0;
 
+  
   return(
     <table>
       <thead>

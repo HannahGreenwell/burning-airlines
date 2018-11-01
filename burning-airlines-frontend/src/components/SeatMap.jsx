@@ -8,27 +8,6 @@ class SeatMap extends Component {
     super(props);
   }
 
-  renderRowNumbers() {
-    let rowNums = [];
-
-    for (let i = 1; i <= this.props.numOfRows; i++) {
-      rowNums.push(<div key={i}>{i}</div>);
-    }
-
-    return rowNums;
-  }
-
-  renderColumnNumbers() {
-    const letters = '*abcdefghijklmnopqrstuvwxyz';
-    let colNums = [];
-
-    for (let i = 1; i <= this.props.numOfColumns; i++) {
-      colNums.push(<div key={i}>{`${letters[i]}`}</div>);
-    }
-
-    return colNums;
-  }
-
   renderSeatMap() {
     let seatMap = [];
 
@@ -52,6 +31,27 @@ class SeatMap extends Component {
     }
 
     return seatMap;
+  }
+
+  renderRowNumbers() {
+    let rowNums = [];
+
+    for (let i = 1; i <= this.props.numOfRows; i++) {
+      rowNums.push(<div key={i}>{i}</div>);
+    }
+
+    return rowNums;
+  }
+
+  renderColumnNumbers() {
+    let colNums = [];
+    const letters = '*abcdefghijklmnopqrstuvwxyz';
+
+    for (let i = 1; i <= this.props.numOfColumns; i++) {
+      colNums.push(<div key={i}>{`${letters[i]}`}</div>);
+    }
+
+    return colNums;
   }
 
   render() {

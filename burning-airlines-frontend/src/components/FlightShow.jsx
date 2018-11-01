@@ -25,7 +25,7 @@ class FlightShow extends Component {
 
   componentDidMount() {
     this.fetchFlight(this.props.match.params.id);
-    setInterval(() => this.fetchFlight(this.props.match.params.id), 2000);
+    // setInterval(() => this.fetchFlight(this.props.match.params.id), 2000);
   }
 
   fetchFlight(flightID) {
@@ -69,10 +69,31 @@ class FlightShow extends Component {
     .catch(console.warn);
   }
 
+  formatSelectedSeat() {
+    const letters = '*abcdefghijklmnopqrstuvwxyz';
+    const selectedSeat = `${this.state.selectedSeat[0]}${letters[this.state.selectedSeat[1]]}`;
+    return selectedSeat;
+  }
+
+  isFlightFullyBooked(){
+    const numOfSeats = this.state.rows * this.state.columns;
+    if (numOfSeats - this.state.reservedSeats.length === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   render() {
     return (
       <div className="flight_show">
-        <p>{this.state.date} Flight {this.state.flightNum} {this.state.origin} - {this.state.destination} {this.state.model}</p>
+        {
+          this.isFlightFullyBooked()
+          ?
+          <p className="bookedOutWarning">Sorry, Flight {this.state.flightNum} is booked out. Please select another flight.</p>
+          :
+          <p>{this.state.date} Flight {this.state.flightNum} {this.state.origin} - {this.state.destination} {this.state.model}</p>
+        }
 
         <form className="seat-selection" onSubmit={() => this.handleSubmit()}>
           <SeatMap
@@ -83,11 +104,14 @@ class FlightShow extends Component {
             onClick={(row, column) => this.handleClick(row, column)}
           />
 
-          <div className="selected-seat-submit">
+        <div className={
+            `${this.isFlightFullyBooked() 
+              ? "hide-seat-submit"
+              : "selected-seat-submit"}`}>
             {
               (this.state.selectedSeat.length > 0)
               ?
-              <span className="current-seat">{`Seat: ${this.state.selectedSeat.join('')}`}</span>
+              <span className="current-seat">{`Seat: ${this.formatSelectedSeat()}`}</span>
               :
               <span className="current-seat">Please select a seat</span>
             }
