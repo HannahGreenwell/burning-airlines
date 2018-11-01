@@ -43,7 +43,7 @@ class FlightShow extends Component {
         origin: response.data.flight.origin,
         destination: response.data.flight.destination,
         model: response.data.airplane.model,
-        reservedSeats: [...this.state.reservedSeats, ...newReservedSeats],
+        reservedSeats: newReservedSeats,
       })
     })
     .catch(console.warn)
