@@ -78,5 +78,3 @@ class SearchResults extends Component {
 }
 
 export default SearchResults;
-
-// <a href={"#/flight/" + f.id}>Select</a>

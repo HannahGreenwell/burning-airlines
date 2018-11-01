@@ -13649,3 +13649,692 @@ Processing by FlightsController#show as HTML
 Completed 200 OK in 22ms (Views: 14.0ms | ActiveRecord: 4.0ms)
 
 
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 10:45:59 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (5.5ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (23.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (4.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 53ms (Views: 13.1ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 10:50:42 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (1.5ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (9.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (2.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 38ms (Views: 17.5ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 10:50:52 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (1.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (4.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (1.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 30ms (Views: 17.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 10:52:31 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (2.0ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (1.2ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (1.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 97ms (Views: 16.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 10:52:49 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (5.7ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (1.1ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (11.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 31ms (Views: 8.4ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-11-01 10:57:00 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/hannah/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/hannah/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (25.3ms)
+  Rendered /Users/hannah/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.0ms)
+  Rendered /Users/hannah/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 87ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-11-01 12:45:38 +1100
+  [1m[35m (42.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hannah/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (3.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.5ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.5ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:4
+  Rendered flights/index.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 630ms (Views: 587.1ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/flight/57" for 127.0.0.1 at 2018-11-01 12:46:07 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mFlight Load (1.4ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 57]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 27ms (Views: 3.9ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 12:49:50 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (12.3ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (0.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 123ms (Views: 57.0ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 12:50:06 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (12.4ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (10.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (4.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 68ms (Views: 19.7ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 12:52:08 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (2.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (1.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 24ms (Views: 14.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 12:55:48 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (4.4ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (18.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (29.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 122ms (Views: 32.2ms | ActiveRecord: 52.6ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-11-01 12:56:09 +1100
+Processing by ReservationsController#create as HTML
+  Parameters: {"seatRow"=>1, "seatColumn"=>1, "user_id"=>17, "flight_id"=>"43", "reservation"=>{"flight_id"=>"43", "user_id"=>17, "seatRow"=>1, "seatColumn"=>1}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[36mReservation Create (44.1ms)[0m  [1m[32mINSERT INTO "reservations" ("flight_id", "user_id", "seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_id", 43], ["user_id", 17], ["seatRow", "1"], ["seatColumn", "1"], ["created_at", "2018-11-01 01:56:09.539934"], ["updated_at", "2018-11-01 01:56:09.539934"]]
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reservations_controller.rb:16
+Redirected to http://localhost:3000/reservation/48
+Completed 302 Found in 59ms (ActiveRecord: 45.3ms)
+
+
+Started GET "/reservation/48" for 127.0.0.1 at 2018-11-01 12:56:09 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"48", "reservation"=>{}}
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+Completed 200 OK in 46ms (Views: 0.6ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 13:16:46 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (1.4ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (0.9ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 203ms (Views: 43.6ms | ActiveRecord: 62.6ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-11-01 13:17:01 +1100
+Processing by ReservationsController#create as HTML
+  Parameters: {"seatRow"=>24, "seatColumn"=>4, "user_id"=>17, "flight_id"=>"43", "reservation"=>{"flight_id"=>"43", "user_id"=>17, "seatRow"=>24, "seatColumn"=>4}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:20
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 13.3ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/reservations_controller.rb:20:in `create'
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 13:18:08 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (5.9ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (2.9ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (1.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 105ms (Views: 31.9ms | ActiveRecord: 10.1ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-11-01 13:18:16 +1100
+Processing by ReservationsController#create as HTML
+  Parameters: {"seatRow"=>24, "seatColumn"=>4, "email"=>"bobby_boy@hotmail.com", "flight_id"=>"43", "reservation"=>{"flight_id"=>"43", "seatRow"=>24, "seatColumn"=>4}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bobby_boy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[36mReservation Create (3.0ms)[0m  [1m[32mINSERT INTO "reservations" ("flight_id", "user_id", "seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_id", 43], ["user_id", 17], ["seatRow", "24"], ["seatColumn", "4"], ["created_at", "2018-11-01 02:18:16.658057"], ["updated_at", "2018-11-01 02:18:16.658057"]]
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reservations_controller.rb:16
+  Rendering reservations/create.html.erb within layouts/application
+  Rendered reservations/create.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 146ms (Views: 92.0ms | ActiveRecord: 19.4ms)
+
+
+Started POST "/search/find" for 127.0.0.1 at 2018-11-01 13:20:45 +1100
+Processing by FlightsController#search as HTML
+  Parameters: {"from"=>"Sydney", "to"=>"Melbourne", "flight"=>{}}
+  [1m[36mFlight Load (1.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE (origin ILIKE '%Sydney%' AND destination ILIKE '%Melbourne%')[0m
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mAirplane Load (1.1ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+Completed 200 OK in 98ms (Views: 2.6ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 13:20:49 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (4.0ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (1.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 56ms (Views: 31.3ms | ActiveRecord: 13.7ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-11-01 13:21:24 +1100
+Processing by ReservationsController#create as HTML
+  Parameters: {"seatRow"=>18, "seatColumn"=>2, "email"=>"bobby_boy@hotmail.com", "flight_id"=>"43", "reservation"=>{"flight_id"=>"43", "seatRow"=>18, "seatColumn"=>2}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bobby_boy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[36mReservation Create (41.9ms)[0m  [1m[32mINSERT INTO "reservations" ("flight_id", "user_id", "seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_id", 43], ["user_id", 17], ["seatRow", "18"], ["seatColumn", "2"], ["created_at", "2018-11-01 02:21:24.153541"], ["updated_at", "2018-11-01 02:21:24.153541"]]
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reservations_controller.rb:16
+Completed 200 OK in 75ms (Views: 0.7ms | ActiveRecord: 51.8ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 13:24:44 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (1.6ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (0.5ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (4.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 176ms (Views: 27.8ms | ActiveRecord: 44.9ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-11-01 13:25:03 +1100
+Processing by ReservationsController#create as HTML
+  Parameters: {"seatRow"=>12, "seatColumn"=>3, "email"=>"bobby_boy@hotmail.com", "flight_id"=>"43", "reservation"=>{"flight_id"=>"43", "seatRow"=>12, "seatColumn"=>3}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bobby_boy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[36mReservation Create (0.8ms)[0m  [1m[32mINSERT INTO "reservations" ("flight_id", "user_id", "seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_id", 43], ["user_id", 17], ["seatRow", "12"], ["seatColumn", "3"], ["created_at", "2018-11-01 02:25:03.266642"], ["updated_at", "2018-11-01 02:25:03.266642"]]
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reservations_controller.rb:16
+Completed 200 OK in 85ms (Views: 0.7ms | ActiveRecord: 52.6ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-11-01 13:31:51 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/hannah/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/hannah/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (29.3ms)
+  Rendered /Users/hannah/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.6ms)
+  Rendered /Users/hannah/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 96ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:32:23 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (1.6ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 25ms (ActiveRecord: 5.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-11-01 13:33:55 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/hannah/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/hannah/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (20.9ms)
+  Rendered /Users/hannah/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered /Users/hannah/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 85ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reservation/51" for 127.0.0.1 at 2018-11-01 13:34:02 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+  [1m[36mFlight Load (1.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+  [1m[36mAirplane Load (1.2ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+Completed 200 OK in 50ms (Views: 2.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:40:21 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (1.4ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 10ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:40:27 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started POST "/search/find" for 127.0.0.1 at 2018-11-01 13:41:21 +1100
+Processing by FlightsController#search as HTML
+  Parameters: {"from"=>"Sydney", "to"=>"Melbourne", "flight"=>{}}
+  [1m[36mFlight Load (8.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE (origin ILIKE '%Sydney%' AND destination ILIKE '%Melbourne%')[0m
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mAirplane Load (2.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+Completed 200 OK in 29ms (Views: 3.2ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 13:41:23 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (0.9ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-11-01 13:41:28 +1100
+Processing by ReservationsController#create as HTML
+  Parameters: {"seatRow"=>24, "seatColumn"=>1, "email"=>"bobby_boy@hotmail.com", "flight_id"=>"43", "reservation"=>{"flight_id"=>"43", "seatRow"=>24, "seatColumn"=>1}}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bobby_boy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[36mReservation Create (5.1ms)[0m  [1m[32mINSERT INTO "reservations" ("flight_id", "user_id", "seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_id", 43], ["user_id", 17], ["seatRow", "24"], ["seatColumn", "1"], ["created_at", "2018-11-01 02:41:28.266999"], ["updated_at", "2018-11-01 02:41:28.266999"]]
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reservations_controller.rb:16
+Completed 200 OK in 27ms (Views: 0.9ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:41:28 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 4ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:43:08 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (9.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 30ms (ActiveRecord: 9.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started POST "/search/find" for 127.0.0.1 at 2018-11-01 13:43:15 +1100
+Processing by FlightsController#search as HTML
+  Parameters: {"from"=>"Sydney", "to"=>"Melbourne", "flight"=>{}}
+  [1m[36mFlight Load (7.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE (origin ILIKE '%Sydney%' AND destination ILIKE '%Melbourne%')[0m
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mAirplane Load (2.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+Completed 200 OK in 33ms (Views: 2.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 13:43:17 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (1.0ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (0.7ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (1.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 28ms (Views: 19.0ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-11-01 13:43:26 +1100
+Processing by ReservationsController#create as HTML
+  Parameters: {"seatRow"=>22, "seatColumn"=>3, "email"=>"bobby_boy@hotmail.com", "flight_id"=>"43", "reservation"=>{"flight_id"=>"43", "seatRow"=>22, "seatColumn"=>3}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bobby_boy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[36mReservation Create (0.8ms)[0m  [1m[32mINSERT INTO "reservations" ("flight_id", "user_id", "seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_id", 43], ["user_id", 17], ["seatRow", "22"], ["seatColumn", "3"], ["created_at", "2018-11-01 02:43:26.043932"], ["updated_at", "2018-11-01 02:43:26.043932"]]
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[35m (41.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reservations_controller.rb:16
+Completed 200 OK in 86ms (Views: 0.6ms | ActiveRecord: 43.2ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 13:46:45 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (1.4ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (3.2ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 88ms (Views: 36.3ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-11-01 13:46:59 +1100
+Processing by ReservationsController#create as HTML
+  Parameters: {"seatRow"=>2, "seatColumn"=>3, "email"=>"bobby_boy@hotmail.com", "flight_id"=>"43", "reservation"=>{"flight_id"=>"43", "seatRow"=>2, "seatColumn"=>3}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bobby_boy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[36mReservation Create (44.1ms)[0m  [1m[32mINSERT INTO "reservations" ("flight_id", "user_id", "seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_id", 43], ["user_id", 17], ["seatRow", "2"], ["seatColumn", "3"], ["created_at", "2018-11-01 02:46:59.395287"], ["updated_at", "2018-11-01 02:46:59.395287"]]
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reservations_controller.rb:16
+Completed 200 OK in 63ms (Views: 1.5ms | ActiveRecord: 45.9ms)
+
+
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:46:59 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (10.4ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 16ms (ActiveRecord: 10.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:48:01 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (31.4ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 34ms (ActiveRecord: 31.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:49:36 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (2.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 5ms (ActiveRecord: 2.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:49:54 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 3ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:50:46 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started GET "/reservation/undefined" for 127.0.0.1 at 2018-11-01 13:51:06 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mReservation Load (3.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+Completed 404 Not Found in 5ms (ActiveRecord: 3.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=undefined):
+  
+app/controllers/reservations_controller.rb:11:in `show'
+Started GET "/reservation/54" for 127.0.0.1 at 2018-11-01 13:51:18 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+  [1m[36mFlight Load (0.8ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+  [1m[36mAirplane Load (1.8ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/search/find" for 127.0.0.1 at 2018-11-01 13:51:50 +1100
+Processing by FlightsController#search as HTML
+  Parameters: {"from"=>"Sydney", "to"=>"Melbourne", "flight"=>{}}
+  [1m[36mFlight Load (2.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE (origin ILIKE '%Sydney%' AND destination ILIKE '%Melbourne%')[0m
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mAirplane Load (3.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.1ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+Completed 200 OK in 23ms (Views: 3.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 13:51:51 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (3.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (1.1ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (1.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 22ms (Views: 11.7ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-11-01 13:52:02 +1100
+Processing by ReservationsController#create as HTML
+  Parameters: {"seatRow"=>22, "seatColumn"=>1, "email"=>"bobby_boy@hotmail.com", "flight_id"=>"43", "reservation"=>{"flight_id"=>"43", "seatRow"=>22, "seatColumn"=>1}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bobby_boy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:19
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[36mReservation Create (2.6ms)[0m  [1m[32mINSERT INTO "reservations" ("flight_id", "user_id", "seatRow", "seatColumn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flight_id", 43], ["user_id", 17], ["seatRow", "22"], ["seatColumn", "1"], ["created_at", "2018-11-01 02:52:02.932135"], ["updated_at", "2018-11-01 02:52:02.932135"]]
+  ↳ app/controllers/reservations_controller.rb:16
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reservations_controller.rb:16
+Completed 200 OK in 65ms (Views: 0.7ms | ActiveRecord: 47.7ms)
+
+
+Started GET "/reservation/55" for 127.0.0.1 at 2018-11-01 13:52:03 +1100
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mReservation Load (1.6ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:11
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+  [1m[36mAirplane Load (12.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:12
+Completed 200 OK in 27ms (Views: 0.8ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/search/find" for 127.0.0.1 at 2018-11-01 13:52:17 +1100
+Processing by FlightsController#search as HTML
+  Parameters: {"from"=>"Sydney", "to"=>"Melbourne", "flight"=>{}}
+  [1m[36mFlight Load (1.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE (origin ILIKE '%Sydney%' AND destination ILIKE '%Melbourne%')[0m
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mAirplane Load (11.1ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+  [1m[36mCACHE Airplane Load (0.0ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+Completed 200 OK in 27ms (Views: 1.7ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/flight/43" for 127.0.0.1 at 2018-11-01 13:52:19 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:17
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:19
+  [1m[36mReservation Load (1.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."flight_id" = $1[0m  [["flight_id", 43]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 3.0ms)
+
+
