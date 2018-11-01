@@ -33,9 +33,9 @@ class SearchForm extends Component{
       <div>
         <h2>Search For Flights</h2>
         <form className="navbar" onSubmit={ ev => this.handleSubmit(ev) }>
-          <label className="margin-right" for="orig">From: </label>
+          <label className="margin-right" htmlFor="orig">From: </label>
           <input className="margin-right" name="orig" className="searchField" type="text" onChange={ ev =>this.handleInput1(ev) } />
-          <label className="margin-right margin-left" for="dest">To: </label>
+          <label className="margin-right margin-left" htmlFor="dest">To: </label>
           <input className="margin-right" name="dest" type="text" onChange={ ev =>this.handleInput(ev) } />
           <input className="margin-right" className="nav-button" type="submit" value="Find flights" />
         </form>

@@ -113,3 +113,13 @@ table, td {
 .navbar-item {
   display: inline;
 }
+
+.seats-available {
+  background-color: lightgreen;
+  font-weight: 400;
+}
+
+.seats-unavailable {
+  background-color: red;
+
+}
