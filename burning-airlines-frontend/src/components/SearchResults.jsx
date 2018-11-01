@@ -6,7 +6,7 @@ const ResultsList = (props) => {
 
   let i = 0;
 
-  
+
   return(
     <table>
       <thead>
@@ -49,6 +49,7 @@ class SearchResults extends Component {
 
   componentDidMount(){
     this.performSearch(this.props.match.params.orig, this.props.match.params.dest);
+    setInterval(() => this.performSearch(this.props.match.params.orig, this.props.match.params.dest), 2000);
   }
 
   componentDidUpdate(prevProps) {

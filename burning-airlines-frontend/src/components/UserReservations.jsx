@@ -4,6 +4,7 @@ import axios from 'axios';
 const ResultsList = (props) => {
 
   let i = 0;
+  const columns = "ABCDEFGH";
 
   return(
     <div>
@@ -16,7 +17,7 @@ const ResultsList = (props) => {
         <tbody>
         {props.reservations.map(res =>
           <tr key={i++}>
-          <td>{res.seatRow}</td><td>{res.seatColumn}</td><td>{res.flight.date}</td><td>{res.flight.flight_number}</td><td>{res.flight.origin}</td><td>{res.flight.destination}</td><td>{res.flight.airplane.model}</td>
+          <td>{res.seatRow}</td><td>{columns[res.seatColumn - 1]}</td><td>{res.flight.date}</td><td>{res.flight.flight_number}</td><td>{res.flight.origin}</td><td>{res.flight.destination}</td><td>{res.flight.airplane.model}</td>
           </tr>)
         }
         </tbody>
