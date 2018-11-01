@@ -17,14 +17,15 @@ class FlightShow extends Component {
       flightNum: '',
       origin: '',
       destination: '',
+      model: '',
       reservedSeats: [],
       selectedSeat: [],
-      currentUserID: -1
     };
   }
 
   componentDidMount() {
     this.fetchFlight(this.props.match.params.id);
+    setInterval(() => this.fetchFlight(this.props.match.params.id), 2000);
   }
 
   fetchFlight(flightID) {
@@ -41,8 +42,8 @@ class FlightShow extends Component {
         flightNum: response.data.flight.flight_number,
         origin: response.data.flight.origin,
         destination: response.data.flight.destination,
+        model: response.data.airplane.model,
         reservedSeats: [...this.state.reservedSeats, ...newReservedSeats],
-        currentUserID: response.data
       })
     })
     .catch(console.warn)
@@ -71,9 +72,9 @@ class FlightShow extends Component {
   render() {
     return (
       <div className="flight_show">
-        <p>{this.state.date} Flight {this.state.flightNum} {this.state.origin} - {this.state.destination}</p>
+        <p>{this.state.date} Flight {this.state.flightNum} {this.state.origin} - {this.state.destination} {this.state.model}</p>
 
-        <form onSubmit={() => this.handleSubmit()}>
+        <form className="seat-selection" onSubmit={() => this.handleSubmit()}>
           <SeatMap
             numOfRows={this.state.rows}
             numOfColumns={this.state.columns}
@@ -82,7 +83,16 @@ class FlightShow extends Component {
             onClick={(row, column) => this.handleClick(row, column)}
           />
 
-          <input type="submit" value="Confirm Flight" />
+          <div className="selected-seat-submit">
+            {
+              (this.state.selectedSeat.length > 0)
+              ?
+              <span className="current-seat">{`Seat: ${this.state.selectedSeat.join('')}`}</span>
+              :
+              <span className="current-seat">Please select a seat</span>
+            }
+            <input type="submit" value="Confirm Flight" />
+          </div>
         </form>
       </div>
     );

@@ -13,7 +13,7 @@ class Seat extends Component {
     if (this.props.reservedSeats.some(rs => rs.join('') === seatString)) {
       status = 'reserved';
     }
-    
+
     if (this.props.selectedSeat.join('') === seatString) {
       status = 'selected';
     }
@@ -22,7 +22,7 @@ class Seat extends Component {
   }
 
   render() {
-    const seatWidthPercentage = `${(100 / this.props.numOfColumns) - 3}%`;
+    // const seatWidthPercentage = `${(100 / this.props.numOfColumns) - 3}%`;
     const status = this.getSeatStatus();
 
     return (
@@ -30,7 +30,6 @@ class Seat extends Component {
         className={`seat ${status}`}
         row={this.props.row}
         column={this.props.column}
-        style={{width: seatWidthPercentage}}
         onClick={this.props.onClick}>
         {status}
       </div>
